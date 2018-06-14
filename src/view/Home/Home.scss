@@ -1,0 +1,176 @@
+.home{
+    width: 100%;
+    height: 2000px;
+}
+.home-content{
+    display: flex;
+    width: 100%;
+    padding:  0 80px;
+    box-sizing: border-box;
+    transition: all 1s;
+    align-items: center;    
+    justify-content: space-between;
+   
+    .home-content-txt{
+        h2{
+            color: #484B60;
+            font-size: 40px;
+            margin-bottom: 64px;
+            font-weight: 600;
+            animation: myfirst .3s ease;
+            -webkit-animation: myfirst .3s ease; /* Safari 与 Chrome */
+        }
+        .blockchain{
+            margin-bottom: 24px;
+            h4{
+                font-size: 34px;
+                display: inline-block;
+                font-weight: 600;
+                color:#484B60;
+            }
+            h4:nth-child(1){
+                animation: myfirst .35s ease;
+                -webkit-animation: myfirst .35s ease; /* Safari 与 Chrome */
+                
+            }
+            h4:nth-child(2){
+                animation: myfirst .35s ease;
+                -webkit-animation: myfirst .35s ease; /* Safari 与 Chrome */
+            }
+        }
+        p{
+            font-size: 14px;
+            width: 480px;
+            height: 66px;
+            color: #484B60;
+            opacity: .6;
+            text-wrap: wrap;
+            animation: myfirst1 .4s ease;
+            -webkit-animation: myfirst1 .4s ease; /* Safari 与 Chrome */
+        }
+        button{
+            width: 200px;
+            height: 48px;
+            margin-top: 48px;
+            font-size: 16px;
+            background: #fff;
+            color: #484B60;
+            font-weight: 600;
+            border: 1px solid rgba(96,98,117, 0.38);
+            outline: none;
+            border-radius: 24px;
+            cursor: pointer;
+            animation: myfirst .45s ease;
+            -webkit-animation: myfirst .45s ease; /* Safari 与 Chrome */
+        }
+    }
+    .home-content-cartoon{
+        flex: 1;
+    }
+}
+@keyframes myfirst
+{
+    0%   {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+ 
+@-webkit-keyframes myfirst
+{
+    0%   {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes myfirst1
+{
+    0%   {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: .6;
+        transform: translateY(0px);
+    }
+}
+ 
+@-webkit-keyframes myfirst1
+{
+    0%   {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: .6;
+        transform: translateY(0px);
+    }
+}
+@media screen and (max-width: 768px) {
+    .home-content {
+        // flex-direction: column;
+        padding:0 40px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        .home-content-txt{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            flex-shrink: 0;        
+            text-align: center;    
+            .blockchain {
+                h4{
+                    font-size: 24px;
+                    line-height: 8px;
+                }
+            }
+            
+        }
+        .home-content-cartoon{
+            width: 100%;
+            flex-shrink: 0;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .home-content {
+        padding:0 16px;
+        flex-direction: column-reverse;
+        .home-content-txt{
+            width: 100%;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            p{
+                width: auto;
+            }
+        }
+        .home-content-cartoon{
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 1440px) {
+    .home-content {
+        .home-content-txt{
+            h2{
+                display: none;
+            }
+            .blockchain{
+                line-height: 28px;
+                h4{
+                    display: block;
+                }
+            }
+        }
+    }
+}

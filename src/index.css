@@ -1,0 +1,16 @@
+html, body{
+  width: 100%;
+  height: 100%;
+}
+body{
+  font-family: "Avenir Next";
+  box-sizing: border-box;
+  font-size: 14px;
+}
+#root{
+  width: 100%;
+  height: 100%;
+}
+a{
+  text-decoration: none;
+}
