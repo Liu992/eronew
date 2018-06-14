@@ -17,11 +17,14 @@ class Globe extends Component {
     }
     componentDidMount() {
         this.initThree();
+        var box = document.getElementsByTagName('canvas')[0];
+        box.style.width = webgl.clientWidth + 'px';
+        box.style.height = webgl.clientWidth + 'px';
     }
     initThree() {
         webgl = document.getElementById('WebGL-output');
         scene = new THREE.Scene();
-        camera = new THREE.PerspectiveCamera(20, window.innerWidth/window.innerWidth);
+        camera = new THREE.PerspectiveCamera(20, window.innerHeight/window.innerHeight);
         camera.position.r = 0;
 
         renderer = new THREE.WebGLRenderer({ 
@@ -31,19 +34,20 @@ class Globe extends Component {
             precision:"highp" 
         });
         renderer.setClearColor('white', 1.0);
-        renderer.setSize(webgl.clientWidth, webgl.clientWidth);
-        // renderer.setSize(window.innerHeight,window.innerHeight)
+        renderer.setSize(webgl.clientWidth*2, webgl.clientWidth*2);
+        
 
         //设置light
-        light = new THREE.AmbientLight('#7B7DA3', 0.8, 90);
+        light = new THREE.AmbientLight('#9699b0', .9, 0);
         light.position.set(0, 0, 0);//设置光源向量
         scene.add(light);
 
-        light1 = new THREE.PointLight('#D9E0E8', 0.6, 0);
-        light1.position.set(200, 100, 200);//设置光源向量
+        light1 = new THREE.PointLight('#D9dcdc', 0.3, 0);// 颜色  距离 强度 位置
+        light1.position.set(200, 100, 50);//设置光源向量
         scene.add(light1);
-        light2 = new THREE.DirectionalLight('#D9E0E8', 0.5, 0);
-        light2.position.set(-200, 100, -300);//设置光源向量
+
+        light2 = new THREE.DirectionalLight('#D9dcdc', 0.1, 0);
+        light2.position.set(-300, -200, -800);//设置光源向量
         scene.add(light2);
        update()
 
@@ -68,6 +72,8 @@ class Globe extends Component {
         var regionR = 50;
         var windowWidth = window.innerWidth;
         var windowHeight = window.innerHeight;
+        if (window.innerWidth>768) {
+
         webgl.onmousemove = function (e) {
             mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
             mouse.z = - (e.clientY / window.innerHeight) * 2 + 1;
@@ -78,7 +84,8 @@ class Globe extends Component {
             camera.position.r = ratio;
             ajustCamera();
         };
-
+        }
+        renderer.shadowMapType=THREE.PCFSoftShadowMap;
         ajustCamera();
         // F3F3FA
         function update () {
@@ -123,7 +130,7 @@ class Globe extends Component {
             scene.add(sphere2);
 
             //球体
-            var sphereGeometry3 = new THREE.SphereGeometry(1, 100, 60);
+            var sphereGeometry3 = new THREE.SphereGeometry(1.5, 100, 60);
             var sphereMaterial3 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
             var sphere3 = new THREE.Mesh(sphereGeometry3, sphereMaterial3);
             // position the sphere
@@ -136,13 +143,13 @@ class Globe extends Component {
             scene.add(sphere3);
 
             //球体
-            var sphereGeometry4 = new THREE.SphereGeometry(2, 100, 60);
+            var sphereGeometry4 = new THREE.SphereGeometry(2.5, 100, 60);
             var sphereMaterial4 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
             var sphere4 = new THREE.Mesh(sphereGeometry4, sphereMaterial4);
             // position the sphere
-            sphere4.position.x = -9;
-            sphere4.position.y = -10;
-            sphere4.position.z = 10;
+            sphere4.position.x = 0;
+            sphere4.position.y = -14;
+            sphere4.position.z = 0;
             sphere4.castShadow = true;
             sphere4.name = 'sphere4';
             // add the sphere to the scene
@@ -162,20 +169,20 @@ class Globe extends Component {
             scene.add(sphere5);
 
             //球体
-            var sphereGeometry6 = new THREE.SphereGeometry(3, 100, 60);
+            var sphereGeometry6 = new THREE.SphereGeometry(4, 100, 60);
             var sphereMaterial6 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
             var sphere6 = new THREE.Mesh(sphereGeometry6, sphereMaterial6);
             // position the sphere
-            sphere6.position.x = -6;
+            sphere6.position.x = -4;
             sphere6.position.y = -7;
-            sphere6.position.z = 14;
+            sphere6.position.z = 11;
             sphere6.castShadow = true;
             sphere6.name = 'sphere6';
             // add the sphere to the scene
             scene.add(sphere6);
 
             //球体
-            var sphereGeometry7 = new THREE.SphereGeometry(6, 100, 60);
+            var sphereGeometry7 = new THREE.SphereGeometry(5, 100, 60);
             var sphereMaterial7 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
             var sphere7 = new THREE.Mesh(sphereGeometry7, sphereMaterial7);
             // position the sphere
@@ -198,47 +205,19 @@ class Globe extends Component {
             sphere8.position.z = -10;
             sphere8.castShadow = true;
             sphere8.name = 'sphere8';
-            // add the sphere to the scene
             scene.add(sphere8);
 
             //球体
             var sphereGeometry9 = new THREE.SphereGeometry(1, 100, 60);
             var sphereMaterial9 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
             var sphere9 = new THREE.Mesh(sphereGeometry9, sphereMaterial9);
-            // position the sphere
             sphere9.position.x = -7;
             sphere9.position.y = 10;
             sphere9.position.z = -14;
             sphere9.castShadow = true;
             sphere9.name = 'sphere9';
-            // add the sphere to the scene
             scene.add(sphere9);
             renderer.render(scene, camera);
-
-             // 连线
-            // var geometry1 = new THREE.Geometry();
-            // geometry1.vertices.push(
-            //     new THREE.Vector3( -7, 10, -14 ),
-            //     new THREE.Vector3( 0, 0, 0 ),
-            //     new THREE.Vector3( -6, -7, 18 )
-            // );
-            // var material1 = new THREE.LineBasicMaterial({
-            //     color: '#eee'
-            // });
-            // var line = new THREE.Line( geometry1, material1 );
-            // scene.add(line);
-
-            //  // 连线
-            //  var geometry2 = new THREE.Geometry();
-            //  geometry2.vertices.push(
-            //      new THREE.Vector3( 5, 11, 5 ),
-            //      new THREE.Vector3( 1, 5, -20 )
-            //  );
-            //  var material2 = new THREE.LineBasicMaterial({
-            //      color: '#eee'
-            //  });
-            //  var line = new THREE.Line( geometry2, material2 );
-            //  scene.add(line);
         }
         
         function render() {
@@ -250,7 +229,7 @@ class Globe extends Component {
     }
     render() {
         return (
-            <div id='WebGL-output'></div>
+            <div id='WebGL-output' disabled></div>
         )
     }
 }

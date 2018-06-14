@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './RouteInfo.scss';
 import { Route, Redirect } from 'react-router-dom';
 
 class RouteInfo extends Component {

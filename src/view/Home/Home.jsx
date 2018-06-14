@@ -1,35 +1,44 @@
 import React, { Component } from "react";
 import './Home.scss';
-import Globe from '../Globe'
+import Language from '../../components/Language';
+import asyncComponent  from '../../components/asyncComponent';
+const Globe = asyncComponent(() => import(/* webpackChunkName: "foo" */ "../Globe"))
 
 class Home extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
-      hei: window.innerHeight - 72
+      hei: window.innerHeight
     }
   }
-  componentDidMount () {
-    // this.setState({
-    //   carhei: this.refs.cartoon.clientWidth
-    // })
+  componentDidMount() {
+    if (window.innerWidth <= 768) {
+      this.setState({
+        hei: 'auto'
+      })
+    }
+  }
+  toWhitepaper () {
+    this.props.history.replace('/index/home')
   }
   render() {
     let { hei } = this.state;
     return (
       <div className="home">
-        <div className="home-content" style={{height: hei}}>
+        <div className="home-content" style={{ height: hei }}>
           <div className="home-content-txt">
-            <h2>eroc</h2>
             <div className="blockchain">
-              <h4>BLOCKCHAIN APP</h4>&nbsp;&nbsp;
-              <h4>PLATFORM</h4>
+              <h4>{Language('global.home.title')}</h4>
             </div>
-            <p>EROC is the Edge Computing Asynchronous Shard Smart Contract Protocol. EROC is also the name of block chain based on this protocol. EROC is the reverse of "Core".</p>
-            <button>WHITEPAPER</button>
+            <p>
+              {Language('global.home.content')}
+            </p>
+            <button onClick={this.toWhitepaper.bind(this)}>
+            {Language('global.home.btn')}
+            </button>
           </div>
-          <div className="home-content-cartoon" ref="cartoon">
-            <Globe/>
+          <div className="home-content-cartoon">
+            <Globe />
           </div>
         </div>
       </div>
