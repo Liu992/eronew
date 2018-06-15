@@ -21,6 +21,17 @@ class Home extends Component {
   toWhitepaper () {
     this.props.history.replace('/index/home')
   }
+  componentWillReceiveProps (newprops) {
+    if (window.innerWidth <= 768) {
+      this.setState({
+        hei: 'auto'
+      })
+    } else {
+      this.setState({
+        hei: newprops.len
+      })
+    }
+  }
   render() {
     let { hei } = this.state;
     return (
@@ -38,7 +49,7 @@ class Home extends Component {
             </button>
           </div>
           <div className="home-content-cartoon">
-            <Globe />
+            <Globe hei={hei}/>
           </div>
         </div>
       </div>

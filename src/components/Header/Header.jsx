@@ -19,6 +19,7 @@ class Header extends Component {
     this.screenChange();
     this.resize()
     this.props.headH(this.refs.head.clientHeight)
+    this.props.len(window.innerHeight)
   }
   upDown() {
     let { visible } = this.state
@@ -30,6 +31,7 @@ class Header extends Component {
     document.documentElement.scrollTop = 0;
   }
   resize() {
+    this.props.len(window.innerHeight);
     let { logo, nav } = this.refs;
     if (nav.offsetLeft - logo.offsetLeft - logo.clientWidth < 40) {
       this.setState({

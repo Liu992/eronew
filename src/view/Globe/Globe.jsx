@@ -34,8 +34,6 @@ class Globe extends Component {
         });
         renderer.setClearColor('white', 1.0);
         renderer.setSize(webgl.clientWidth*2, webgl.clientWidth*2);
-        
-
         //设置light
         light = new THREE.AmbientLight('#9699b0', .9, 0);
         light.position.set(0, 0, 0);//设置光源向量

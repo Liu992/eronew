@@ -18,7 +18,8 @@ class Index extends Component {
     this.state = {
       up: '',
       headH: 72,
-      langFlag: 'en'
+      langFlag: 'en',
+      len: 'auto'
     }
     this.changeScroll = this.changeScroll.bind(this)
     this.headH = this.headH.bind(this)
@@ -55,21 +56,27 @@ class Index extends Component {
       langFlag: ch
     })
   }
+  len (len) {
+    this.setState({
+      len: len
+    })
+  }
   render() {
     let { route } = this.props;
-    let { up } = this.state;
+    let { up, len } = this.state;
     return (
       <div className="wrapper">
         <IntlProvider
           locale={this.state.langFlag}
-          messages={messages[this.state.langFlag]}>
-          <Header up={up} headH={this.headH} lang={this.language.bind(this)}/>
+          messages={messages[this.state.langFlag]}
+          >
+          <Header up={up} headH={this.headH} lang={this.language.bind(this)} len={this.len.bind(this)}/>
         </IntlProvider>
         <div className="section">
           <IntlProvider
             locale={this.state.langFlag}
             messages={messages[this.state.langFlag]}>
-            <RouteInfo routes={route}/>
+            <RouteInfo routes={route} len={len}/>
           </IntlProvider>
           <IntlProvider
             locale={this.state.langFlag}
