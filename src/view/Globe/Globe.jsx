@@ -21,7 +21,6 @@ class Globe extends Component {
         // box.getContext("2d").translate()
         box.style.width = webgl.clientWidth + 'px';
         box.style.height = webgl.clientWidth + 'px';
-        box.style.zIndex = -5;
     }
     initThree() {
         webgl = document.getElementById('WebGL-output');
@@ -74,8 +73,8 @@ class Globe extends Component {
         if (window.innerWidth>768) {
 
         webgl.onmousemove = function (e) {
-            mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-            mouse.z = - (e.clientY / window.innerHeight) * 2 + 1;
+            mouse.x = (e.clientX / window.innerWidth) * 2;
+            mouse.z = - (e.clientY / window.innerHeight) * 2;
             raycaster.setFromCamera(mouse, camera);
             var ratio = (0.5 - (e.x / windowWidth)) * Math.PI;
             var y = (0.5 - (e.y / windowHeight)) * 100;
