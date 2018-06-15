@@ -11,6 +11,9 @@ import zh from 'react-intl/locale-data/zh';
 import en from 'react-intl/locale-data/en';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+
+
+
 addLocaleData([...zh, ...en]);
 const ReactDOM = reactDOMPolyfill(React);
 ReactDOM.render(<App />, document.getElementById('root'));

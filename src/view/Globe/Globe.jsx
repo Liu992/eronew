@@ -18,23 +18,25 @@ class Globe extends Component {
     componentDidMount() {
         this.initThree();
         var box = document.getElementsByTagName('canvas')[0];
+        // box.getContext("2d").translate()
         box.style.width = webgl.clientWidth + 'px';
         box.style.height = webgl.clientWidth + 'px';
+        box.style.zIndex = -5;
     }
     initThree() {
         webgl = document.getElementById('WebGL-output');
         scene = new THREE.Scene();
         camera = new THREE.PerspectiveCamera(20, window.innerHeight/window.innerHeight);
         camera.position.r = 0;
-
+        
         renderer = new THREE.WebGLRenderer({ 
             antialias: true,
             maxLights:1,
             precision:"highp" 
         });
-        renderer.setClearColor('white', 1.0);
+        renderer.setClearColor('#ffffff', 1.0);
         renderer.setSize(webgl.clientWidth*2, webgl.clientWidth*2);
-        //设置light
+        // //设置light
         light = new THREE.AmbientLight('#9699b0', .9, 0);
         light.position.set(0, 0, 0);//设置光源向量
         scene.add(light);
