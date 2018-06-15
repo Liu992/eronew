@@ -47,7 +47,7 @@ class Header extends Component {
   // 中英文切换
   checklang() {
     this.setState({
-      lang: this.state.lang == 'zh-CN' ? 'en' : 'zh-CN'
+      lang: this.state.lang === 'zh-CN' ? 'en' : 'zh-CN'
     }, () => {
       this.props.lang(this.state.lang)
     })
@@ -83,7 +83,7 @@ class Header extends Component {
               <li onClick={this.hide.bind(this)}><Link to="/index/home"><FormattedMessage id="global.nav.home" /></Link></li>
               <li onClick={this.hide.bind(this)}><Link to="/index/home"><FormattedMessage id="global.nav.foundation" /></Link></li>
               <li onClick={this.hide.bind(this)}><Link to="/index/home"><FormattedMessage id="global.nav.careers" /></Link></li>
-              <li onClick={this.showol.bind(this)}><a href="javascript:;"><FormattedMessage id="global.nav.download" /></a></li>
+              <li onClick={this.showol.bind(this)}><FormattedMessage id="global.nav.download" /></li>
             </ul>
             <ol className={olshow?'olshow':''}>
               <li onClick={this.hide.bind(this)}><Link to="/index/home"><FormattedMessage id="global.nav.download1" /></Link></li>
@@ -103,9 +103,9 @@ class Header extends Component {
             <li><Link to="/index/home"><FormattedMessage id="global.nav.careers" /></Link></li>
             <li><Link to="/index/home"><FormattedMessage id="global.nav.download" /></Link></li>
           </ul>
-          <span className="lang" onClick={this.checklang.bind(this)}>{lang == 'zh-CN' ? 'ENGLISH' : '中 文'}</span>
+          <span className="lang" onClick={this.checklang.bind(this)}>{lang === 'zh-CN' ? 'ENGLISH' : '中 文'}</span>
         </div>
-        <div className={`smlang-box ${on ? 'none' : 'flex'}`}><span className="smlang" onClick={this.checklang.bind(this)}>{lang == 'zh-CN' ? 'ENGLISH' : '中 文'}</span></div>
+        <div className={`smlang-box ${on ? 'none' : 'flex'}`}><span className="smlang" onClick={this.checklang.bind(this)}>{lang === 'zh-CN' ? 'ENGLISH' : '中 文'}</span></div>
       </div>
     )
   }

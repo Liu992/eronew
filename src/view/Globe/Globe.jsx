@@ -28,7 +28,6 @@ class Globe extends Component {
         camera.position.r = 0;
 
         renderer = new THREE.WebGLRenderer({ 
-            antialias: true, 
             antialias: true,
             maxLights:1,
             precision:"highp" 
@@ -87,11 +86,11 @@ class Globe extends Component {
         }
         renderer.shadowMapType=THREE.PCFSoftShadowMap;
         ajustCamera();
-        // F3F3FA
+        // #F3F3FA
         function update () {
             //球体
             var sphereGeometry = new THREE.SphereGeometry(8, 100, 60);
-            var sphereMaterial = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
+            var sphereMaterial = new THREE.MeshLambertMaterial({ color: '#F3F3FA' });
             var sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
             // position the sphere
             sphere.position.x = 0;
@@ -104,7 +103,7 @@ class Globe extends Component {
 
             //球体
             var sphereGeometry1 = new THREE.SphereGeometry(3, 100, 60);
-            var sphereMaterial1 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
+            var sphereMaterial1 = new THREE.MeshLambertMaterial({ color: '#F3F3FA' });
             var sphere1 = new THREE.Mesh(sphereGeometry1, sphereMaterial1);
             // position the sphere
             sphere1.position.x = 5;
@@ -118,7 +117,7 @@ class Globe extends Component {
 
             //球体
             var sphereGeometry2 = new THREE.SphereGeometry(2, 100, 60);
-            var sphereMaterial2 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
+            var sphereMaterial2 = new THREE.MeshLambertMaterial({ color: '#F3F3FA' });
             var sphere2 = new THREE.Mesh(sphereGeometry2, sphereMaterial2);
             // position the sphere
             sphere2.position.x = 12;
@@ -131,7 +130,7 @@ class Globe extends Component {
 
             //球体
             var sphereGeometry3 = new THREE.SphereGeometry(1.5, 100, 60);
-            var sphereMaterial3 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
+            var sphereMaterial3 = new THREE.MeshLambertMaterial({ color: '#F3F3FA' });
             var sphere3 = new THREE.Mesh(sphereGeometry3, sphereMaterial3);
             // position the sphere
             sphere3.position.x = -6;
@@ -144,7 +143,7 @@ class Globe extends Component {
 
             //球体
             var sphereGeometry4 = new THREE.SphereGeometry(2.5, 100, 60);
-            var sphereMaterial4 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
+            var sphereMaterial4 = new THREE.MeshLambertMaterial({ color: '#F3F3FA' });
             var sphere4 = new THREE.Mesh(sphereGeometry4, sphereMaterial4);
             // position the sphere
             sphere4.position.x = 0;
@@ -157,7 +156,7 @@ class Globe extends Component {
 
             //球体
             var sphereGeometry5 = new THREE.SphereGeometry(4, 100, 60);
-            var sphereMaterial5 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
+            var sphereMaterial5 = new THREE.MeshLambertMaterial({ color: '#F3F3FA' });
             var sphere5 = new THREE.Mesh(sphereGeometry5, sphereMaterial5);
             // position the sphere
             sphere5.position.x = 12;
@@ -170,7 +169,7 @@ class Globe extends Component {
 
             //球体
             var sphereGeometry6 = new THREE.SphereGeometry(4, 100, 60);
-            var sphereMaterial6 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
+            var sphereMaterial6 = new THREE.MeshLambertMaterial({ color: '#F3F3FA' });
             var sphere6 = new THREE.Mesh(sphereGeometry6, sphereMaterial6);
             // position the sphere
             sphere6.position.x = -4;
@@ -183,7 +182,7 @@ class Globe extends Component {
 
             //球体
             var sphereGeometry7 = new THREE.SphereGeometry(5, 100, 60);
-            var sphereMaterial7 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
+            var sphereMaterial7 = new THREE.MeshLambertMaterial({ color: '#F3F3FA' });
             var sphere7 = new THREE.Mesh(sphereGeometry7, sphereMaterial7);
             // position the sphere
             sphere7.position.x = -6;
@@ -197,7 +196,7 @@ class Globe extends Component {
 
             //球体
             var sphereGeometry8 = new THREE.SphereGeometry(3, 100, 60);
-            var sphereMaterial8 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
+            var sphereMaterial8 = new THREE.MeshLambertMaterial({ color: '#F3F3FA' });
             var sphere8 = new THREE.Mesh(sphereGeometry8, sphereMaterial8);
             // position the sphere
             sphere8.position.x = 1;
@@ -209,7 +208,7 @@ class Globe extends Component {
 
             //球体
             var sphereGeometry9 = new THREE.SphereGeometry(1, 100, 60);
-            var sphereMaterial9 = new THREE.MeshLambertMaterial({ color: 'F3F3FA' });
+            var sphereMaterial9 = new THREE.MeshLambertMaterial({ color: '#F3F3FA' });
             var sphere9 = new THREE.Mesh(sphereGeometry9, sphereMaterial9);
             sphere9.position.x = -7;
             sphere9.position.y = 10;

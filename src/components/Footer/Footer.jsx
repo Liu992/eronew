@@ -9,7 +9,7 @@ class Footer extends Component {
         <span>
           <a href="mailto:Xihua.Duan@EROC.IO" title="Xihua.Duan@EROC.IO">Contact Email</a>
           <i> | </i>
-          <a href="#">Privacy Policy</a></span>
+          <a href="/">Privacy Policy</a></span>
       </div>
     )
   }
