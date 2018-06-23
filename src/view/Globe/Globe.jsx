@@ -26,7 +26,7 @@ class Globe extends Component {
     initThree() {
         webgl = document.getElementById('WebGL-output');
         scene = new THREE.Scene();
-        camera = new THREE.PerspectiveCamera(20, window.innerHeight / window.innerHeight);
+        camera = new THREE.PerspectiveCamera(17, window.innerHeight / window.innerHeight);
         camera.position.r = 0;
 
         renderer = new THREE.WebGLRenderer({
@@ -44,15 +44,15 @@ class Globe extends Component {
         light.position.set(0, 0, 0);//设置光源向量
         scene.add(light);
 
-        light1 = new THREE.PointLight('#6A9FBD', 0.6, 0, 1, 0);// 颜色  距离 强度 位置
+        light1 = new THREE.PointLight('#6A9FBD', 0.55, 0, 1, 0);// 颜色  距离 强度 位置
         light1.position.set(200, 100, 0);//设置光源向量
         scene.add(light1);
 
-        light2 = new THREE.DirectionalLight('#6A9FBD', 0.6, 0, 1, 0);// .1
+        light2 = new THREE.DirectionalLight('#6A9FBD', 0.55, 0, 1, 0);// .1
         light2.position.set(-200, -100, 80);//设置光源向量
         scene.add(light2);
 
-        light3 = new THREE.DirectionalLight('#6A9FBD',  0.6, 0, 1, 0);// .1
+        light3 = new THREE.DirectionalLight('#6A9FBD',  0.55, 0, 1, 0);// .1
         light3.position.set(100, -50, 40);//设置光源向量
         scene.add(light3);
         
@@ -304,19 +304,37 @@ class Globe extends Component {
             }
         }
 
+
+
+        var num5 = -14;
+        let flag5 = true;
+        let han5 = 0.02
+        // #F3F3FA
+        function add5 () {
+            num5 += han5;
+            if (num5 >= -10&&flag5) {
+                flag5 = !flag5;
+                han5 = -0.02
+            }else if(num5 <= -17){
+                han5 = 0.02
+                flag5 = !flag5
+            }
+        }
+
         function render() { 
-            console.log(num) 
             add()
             add1()
             add2()
             add3()
             add4()
+            add5()
             renderer.render(scene, camera);
             sphere9.position.y = num;
             sphere8.position.y = num1;
             sphere7.position.y = num2;
             sphere6.position.y = num3;
             sphere5.position.y = num4;
+            sphere4.position.y = num5;
             scene.rotation.y -= -0.003;
             requestAnimationFrame(render);
         }

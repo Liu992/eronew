@@ -20,9 +20,9 @@
     align-items: center;    
     justify-content: space-between;
     box-sizing: border-box;
-    padding:  0 10%;
+    padding:  0 5%;
     position: relative;
-    
+    z-index: 0;
     &::before{
         content: '';
         display: block;
@@ -47,7 +47,6 @@
         flex-direction: column;
         justify-content: center;
         .blockchain{
-            margin-bottom: 24px;
             h4{
                 font-size: 48px;
                 line-height: 56px;
@@ -65,14 +64,14 @@
             max-width: 480px;
             font-weight: 500;
             @include tintcolor();
+            margin: 16px 0 32px 0;
             text-wrap: wrap;
             animation: myfirst .5s ease-in-out;
             -webkit-animation: myfirst .5s ease-in-out; /* Safari 与 Chrome */
         }
         button{
             width: 240px;
-            height: 56px;
-            margin-top: 48px;
+            height: 48px;
             font-size: 16px;
             background: transparent;
             // background: #fff;
@@ -99,9 +98,29 @@
 }
 // 简介
 .home-site{
-    padding: 0 10%;
+    padding: 0 5%;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    .site-bg{
+        position: absolute;
+        top: -220px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        
+        img{
+           width: 100%;
+            // position: absolute;
+            // top: 0;
+            // left: 50;
+            // transform: translateX(-50%)
+        }
+    }
     h1{
-        margin-top: 122px;
+        z-index: 2;
         font-size: 600;
         margin-bottom: 24px;
         text-align: center;
@@ -110,6 +129,7 @@
         @include darkcolor()
     }
     p{
+        z-index: 2;
         font-size: 16px;
         letter-spacing: 0;
         line-height: 24px;
@@ -127,56 +147,104 @@
 .home-advantage{
     width: 100%;
     &>div{
-        margin-top: 290px;
+        box-sizing: border-box;
+        margin-bottom: 80px;
         display: flex;
-        justify-content: space-between;
-        padding: 0 10%;
+        justify-content: center;
+        align-content: center;
+    }
+    &>div:last-child{
+        margin-bottom: 0;
     }
     .adv-txt{
         display: inline-block;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         h3{
             font-size: 600;
-            margin-top: 36px;
             margin-bottom: 32px;
             font-size: 24px;
             line-height: 32px;
             @include darkcolor();
-            max-width: 400px;
+            // max-width: 400px;
+            
         }
         p{
             font-size: 14px;
             line-height: 24px;
             @include tintcolor();
-            max-width: 480px;
+            // max-width: 480px;
         }
     }
     .adv-img{
+        display: flex;
+        justify-content: center;
         display: inline-block;
         width: 410px;
-        text-align: center;
-        vertical-align: center;
+        width: 30%;
         img{
-            width: 100%;
+            //width: 100%;
         }
     }
+    .home-advantage1, .home-advantage3{
+        width: 100%;
+        &>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+        }
+        div:nth-child(1){
+            margin-right: 20%;
+        }
+    }
+    .home-advantage56{
+        display: flex;
+        flex-direction: row;
+        &>div{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .adv-txt{
+            width: 100%;
+        }
+        .adv-img{
+            margin: 40px 0;
+        }
+        div:nth-child(1){
+            margin-right: 20%;
+        }
+    }
+    .home-advantage2, .home-advantage4{
+        .adv-txt:nth-child(2){
+            margin-left: 20%;
+        }
+    }
+
 }
 // 进程
 .home-path{
     box-sizing: border-box;
-    margin-top: 253px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 5%;
     &>h2{
+        width: 100%;
         text-align: center;
         @include darkcolor();
         font-size: 32px;
         line-height: 40px;
-        margin: 160px 0 120px 0;
+        margin: 100px 0 100px 0;
         span{
             display: inline-block;
-            max-width: 587px;
+            width: 610px;
         }
     }
 }
@@ -203,7 +271,7 @@
             &::after{
                 position: absolute;
                 top: 22px;
-                left: -40px;
+                left: -30px;
                 display: block;
                 content: '';
                 width: 1px;
@@ -225,7 +293,7 @@
     height: 40px;
     position: absolute;
     top: -16px;
-    left: -60px;
+    left: -50px;
 }
 
 .a {
@@ -278,15 +346,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 5%;
+    position: relative;
     h1{
         margin-top: 524px;
         font-size: 32px;
         line-height: 40px;
         @include darkcolor();
-    }
-    p{
-
     }
     p:nth-child(2){
         @include tintcolor();
@@ -304,7 +370,7 @@
             box-sizing: border-box;
             background: rgba(0,0,0,0.12);
             border-radius: 100px;
-            flex: 1;
+            width: 400px;
             height: 48px;
             outline: none;
             border: none;
@@ -445,7 +511,6 @@
 
 @media screen and (max-width: 768px) {
     .home-content {
-        padding:0 24px;
         flex-direction: column-reverse;
         .home-content-txt{
             display: flex;
@@ -457,9 +522,12 @@
             flex: 1;
             justify-content: center; 
             height: auto;
+            margin-top: -40px;
+            z-index: 4;
             .blockchain {
                 h4{
-                    font-size: 24px;
+                    font-size: 32px;
+                    line-height: 40px;
                 }
             }
             p{
@@ -468,8 +536,10 @@
             }
         }
         .home-content-cartoon{
+            margin-top: 50px;
             width: 100%;
             flex-shrink: 0;
+            z-index: 3;
         }
         &::before{
             background-position: center top;
@@ -485,20 +555,24 @@
         }
     }
     .home-site{
+        height: auto;
         h1{
+            margin-top: 40px;
             font-size: 20px;
+        }
+        p{
+            // margin-bottom: 40px;
+        }
+        .site-bg{
+            top: -40px;
         }
     }
       // 六大优势
     .home-advantage{
-        // background: #fff;
         .adv-txt{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             h2{
                 width: 100%;
+                margin-top: 0;
                 span{
 
                 }
@@ -507,30 +581,71 @@
                 width: 100%;
             }
         }
-        .adv-img{
-            width: 100%;
-        }
         &>div{
-            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
-            flex-direction:column;
-            padding: 0 16px;
-            // text-align: center;
+            box-sizing: border-box;
+            padding: 0 5%;
             margin: 0;
-            .adv-txt h3{
-                font-size: 20px;
-                line-height: 28px;
-                text-align: center;
+            .adv-txt{
+                width: 100%;
+                margin: 0;
+                h3 {
+                    font-size: 20px;
+                    line-height: 28px;
+                    text-align: center;
+                }
+            }
+            .adv-img{
+                width: 100%;
+                margin:40px 0;
+                display: flex;
+                justify-content: center;
+                img{
+                    width: 70%;
+                }
             }
         }
-        .home-advantage1{
+        .home-advantage1, .home-advantage3{
+            display: flex;
             flex-direction:column-reverse;
+            .adv-txt{
+                width: 100%;
+            }
+            .adv-img{
+                width: 100%;
+            }
         }
         .home-advantage3{
-            flex-direction:column-reverse;
+            .adv-img{
+                margin: 0;
+                img{
+                    height: 70%;
+                }
+            }
+        }
+        .home-advantage2,.home-advantage4{
+            flex-direction: column;
+            & .adv-txt:nth-child(2){
+                margin:0;
+            }
+            .adv-img{
+                img{
+                    height: 50%;
+                }
+            }
+        }
+        .home-advantage56{
+            flex-direction: column;
+            &>div{
+                width: 100%;
+                .adv-img{
+                    margin: 0;
+                }
+            }
         }
     }
     // 订阅
     .home-site  {
+        margin: 0;
         h1{
             font-size: 22px;
         }
@@ -540,27 +655,39 @@
     }   
     // 进程
     .home-path{
+        padding: 0 5%;
         margin: 0;
         h2{
-            margin: 20px 0 20px 0;
+            margin: 40px 0 40px 0;
             font-size: 20px;
             line-height: 28px;
+            span{
+                width: auto;
+            }
         }
     }
     // 提交邮箱
     .home-subscribe{
+        padding: 0 5%;
         text-align: center;
+        margin-top: 40px;
         h1{
             margin: 0;
             font-size: 20px;
             line-height: 28px;
         }
         p:nth-child(3){
+            width: 100%;
+            display: flex;
             input{
-                width: auto;
+                display: block;
+                width: 70%;
             }
             button{
-                width: auto;
+                display: block;
+                width: 30%;
+                text-align: center;
+                font-size: 14px;
             }
         }
     }
@@ -568,7 +695,6 @@
 
 @media screen and (max-width: 1440px) {
     .home-content {
-        padding: 0 40px;
         .home-content-txt{
             height: 100%;
             .blockchain{
@@ -582,7 +708,6 @@
 }
 @media screen and (max-width: 767px) {
     .home-content {
-        padding: 0 24px;
         .home-content-txt{
             width: 100%;
             flex: 1;
@@ -593,32 +718,6 @@
             }
             p{
                 width: auto;
-            }
-        }
-        .home-content-cartoon{
-            width: 100%;
-        }
-    }
-}
-@media screen and (max-width: 414px) {
-    .home{
-        // margin-top:30px;
-    }
-    .home-content {
-        padding:0 16px;
-        flex-direction: column-reverse;
-        .home-content-txt{
-            width: 100%;
-            .blockchain{
-                margin-bottom: 20px;
-                h4{
-                    font-size: 24px;
-                    line-height: 32px;
-                }
-            }
-            p{
-                width: auto;
-                height: auto;
             }
         }
         .home-content-cartoon{

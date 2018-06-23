@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="160px" viewBox="0 0 200 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Desktop Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="three" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Copy" transform="translate(-950.000000, -5011.000000)">
+            <g id="Group-15" transform="translate(950.000000, 5011.000000)">
+                <g id="Group-4" transform="translate(43.000000, 14.000000)">
+                    <path d="M49,73 L49,109.5" id="Line-7" stroke="#9598B6" stroke-linecap="square" stroke-dasharray="3,2"></path>
+                    <polyline id="Polygon-Copy-9" stroke="#50C1E3" points="49 73 80.1769145 55 80.1769145 55 111.353829 73 111.353829 109 80.1769145 127 49 109"></polyline>
+                    <polygon id="Polygon-Copy-10" stroke="#50C1E3" points="34.2380346 27 65.4149491 45 65.4149491 81 34.2380346 99 3.06112005 81 3.06112005 45"></polygon>
+                    <polygon id="Polygon-Copy-11" stroke="#50C1E3" points="80.2380346 0 111.414949 18 111.414949 54 80.2380346 72 49.0611201 54 49.0611201 18"></polygon>
+                    <polygon id="Polygon-Copy-12" stroke-opacity="0.3" stroke="#9598B6" points="79.8233956 72 95.1426618 80.8445825 95.1426618 98.5337474 79.8233956 107.37833 64.5041294 98.5337474 64.5041294 80.8445825"></polygon>
+                    <polygon id="Polygon-Copy-13" stroke-opacity="0.3" stroke="#9598B6" points="79.8233956 20 95.1426618 28.8445825 95.1426618 46.5337474 79.8233956 55.3783299 64.5041294 46.5337474 64.5041294 28.8445825"></polygon>
+                    <polygon id="Polygon-Copy-14" stroke-opacity="0.3" stroke="#9598B6" points="33.8233956 47 49.1426618 55.8445825 49.1426618 73.5337474 33.8233956 82.3783299 18.5041294 73.5337474 18.5041294 55.8445825"></polygon>
+                    <polyline id="Path-3-Copy" stroke="#50C1E3" points="49 73 80 91 112 73"></polyline>
+                    <path d="M80,127 L80,90" id="Path-4-Copy" stroke="#50C1E3"></path>
+                    <polyline id="Polygon-Copy-15" stroke="#778AFF" stroke-width="2" transform="translate(78.941343, 117.111216) rotate(60.000000) translate(-78.941343, -117.111216) " points="87.441343 103.611216 87.441343 120.611216 70.441343 130.611216"></polyline>
+                    <circle id="Oval-7-Copy-7" stroke="#50C1E3" fill="#9598B6" cx="49" cy="73" r="2"></circle>
+                    <circle id="Oval-7-Copy-8" stroke="#50C1E3" fill="#9598B6" cx="111" cy="73" r="2"></circle>
+                    <circle id="Oval-7-Copy-9" stroke="#50C1E3" fill="#9598B6" cx="65" cy="45" r="2"></circle>
+                    <circle id="Oval-7-Copy-10" stroke="#50C1E3" fill="#9598B6" cx="111" cy="18" r="2"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

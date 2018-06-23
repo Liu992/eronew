@@ -27,7 +27,13 @@ class Index extends Component {
     this.winScroll()
   }
   winScroll() {
-    window.addEventListener('scroll', this.throttle(this.changeScroll, 500, 1000));
+    //给页面绑定滑轮滚动事件  
+    if (document.addEventListener) {//firefox  
+      document.addEventListener('DOMMouseScroll', this.throttle(this.changeScroll, 500, 500));  
+    }  
+    //滚动滑轮触发scrollFunc方法  //ie 谷歌  
+    window.onmousewheel = document.onmousewheel = this.throttle(this.changeScroll, 500, 500)
+    // window.addEventListener('scroll', this.throttle(this.changeScroll, 500, 1000));
   }
   headH(h) {
     this.setState({
@@ -55,21 +61,39 @@ class Index extends Component {
       }
     };
   }
-  changeScroll() {
-    let { headH } = this.state;
-    if (window.scrollY > headH + 200 && window.scrollY < window.innerHeight - 120) {
-      this.setState({
-        up: 'up'
-      })
-    } else if (window.scrollY > headH && window.scrollY >= window.innerHeight - 120) {
-      this.setState({
-        up: 'down'
-      })
-    } else {
-      this.setState({
-        up: ''
-      })
+  changeScroll(e) {
+    // 鼠标滚轮方向 
+    if (!e) {
+      return;
     }
+      e = e || window.event; 
+      if (e.view.scrollY&&e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件          
+          if (e.wheelDelta > 0) { //当滑轮向上滚动时  
+              this.setState({
+                up: 'down'
+              })
+          }  
+          if (e.wheelDelta < 0) { //当滑轮向下滚动时  
+            this.setState({
+              up: 'up'
+            })
+          }  
+      } else if (e.view.scrollY&&e.detail) {  //Firefox滑轮事件  
+          if (e.detail> 0) { //当滑轮向上滚动时  
+            this.setState({
+              up: 'down'
+            })
+          }  
+          if (e.detail< 0) { //当滑轮向下滚动时  
+            this.setState({
+              up: 'up'
+            })
+          }  
+      }else {
+        this.setState({
+          up: ''
+        })
+      }
   }
   language(ch) {
     this.setState({
@@ -104,7 +128,7 @@ class Index extends Component {
     )
   }
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.changeScroll);
+    //window.removeEventListener('scroll', this.changeScroll);
   }
 }
 

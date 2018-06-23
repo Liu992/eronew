@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import './Home.scss';
 import Language from '../../components/Language';
 import asyncComponent from '../../components/asyncComponent';
-const Globe = asyncComponent(() => import(/* webpackChunkName: "foo" */ "../Globe"))
-const Globe1 = asyncComponent(() => import(/* webpackChunkName: "foo" */ "../Globe1/Globe1.jsx"))
+const Globe = asyncComponent(() => import(/* webpackChunkName: "foo" */ "../Globe"));
 
 class Home extends Component {
   constructor(props) {
@@ -45,10 +44,11 @@ class Home extends Component {
     this.props.history.replace('/index/home')
   }
   componentDidMount () {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth > 768) {
       this.refs.txt.style.height =  window.innerHeight + 'px';
+      this.refs.cartoon.style.height = 'auto';
     } else {
-      this.refs.cartoon.style.height = window.innerWidth + 'px'
+      this.refs.cartoon.style.height = window.innerWidth*0.9 + 'px'
       this.refs.txt.style.height = 'auto';
     }
     
@@ -75,6 +75,9 @@ class Home extends Component {
         </div>
         {/* 网站简介 */}
         <div className="home-site">
+          <div className="site-bg">
+            <img src={require('../../assets//image//Group.svg')} alt=""/>
+          </div>
           <h1>What is eRoc?</h1>
           <p>
             {Language('global.home.content')}
@@ -88,12 +91,12 @@ class Home extends Component {
               <p>{Language('global.home.advantage1.content')}</p>
             </div>
             <div className="adv-img">
-              <img src={require('../../assets/image/1.gif')} alt=""/>
+              <img src={require('../../assets/image/a1.gif')} alt=""/>
             </div>
           </div>
           <div className="home-advantage2">
             <div className="adv-img">
-              <img src={require('../../assets/image/123.jpg')} alt=""/>
+            <img src={require('../../assets/image/a2.svg')} alt=""/>
             </div>
             <div className="adv-txt">
               <h3>{Language('global.home.advantage2.title')}</h3>
@@ -106,12 +109,12 @@ class Home extends Component {
               <p>{Language('global.home.advantage3.content')}</p>
             </div>
             <div className="adv-img">
-              <img src={require('../../assets/image/123.jpg')} alt=""/>
+            <img src={require('../../assets/image/a3.png')} alt=""/>
             </div>
           </div>
           <div className="home-advantage4">
             <div className="adv-img">
-              <img src={require('../../assets/image/123.jpg')} alt=""/>
+            <img src={require('../../assets/image/a4.svg')} alt=""/>
             </div>
             <div className="adv-txt">
               <h3>{Language('global.home.advantage4.title')}</h3>
@@ -119,13 +122,23 @@ class Home extends Component {
             </div>
           </div>
           <div className="home-advantage56">
-            <div className="adv-txt">
-              <h3>{Language('global.home.advantage5.title')}</h3>
-              <p>{Language('global.home.advantage5.content')}</p>
+            <div className="home-advantage5">
+              <div className="adv-img">
+              <img src={require('../../assets/image/a5.svg')} alt=""/>
+              </div>
+              <div className="adv-txt">
+                <h3>{Language('global.home.advantage5.title')}</h3>
+                <p>{Language('global.home.advantage5.content')}</p>
+              </div>
             </div>
-            <div className="adv-txt">
-              <h3>{Language('global.home.advantage6.title')}</h3>
-              <p>{Language('global.home.advantage6.content')}</p>
+            <div className="home-advantage6">
+            <div className="adv-img">
+            <img src={require('../../assets/image/a6.svg')} alt=""/>
+            </div>
+              <div className="adv-txt">
+                <h3>{Language('global.home.advantage6.title')}</h3>
+                <p>{Language('global.home.advantage6.content')}</p>
+              </div>
             </div>
           </div>
         </div>
