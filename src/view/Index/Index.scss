@@ -1,12 +1,9 @@
 .wrapper{
     width: 100%;
     height: 100%;
-    position: relative;
-    .section{
-        background: #fff;
+    .wrapper-content{
         width: 100%;
-        position: absolute;
-        top: 0px;
-        left: 0;
+        //background: #fff;
+        min-height: 100%;
     }
 }

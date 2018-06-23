@@ -7,7 +7,7 @@ class Footer extends Component {
       <div className='footer'>
         <span>© 2018 eRoc Foundation. <i></i>All rights reserved.</span>
         <span>
-          <a href="mailto:Xihua.Duan@EROC.IO" title="Xihua.Duan@EROC.IO">Contact Email</a>
+          <a href="mailto:Xihua.Duan@EROC.IO" title="Xihua.Duan@EROC.IO">xihua.duan@eroc.io</a>
           <i> | </i>
           <a href="/">Privacy Policy</a></span>
       </div>
