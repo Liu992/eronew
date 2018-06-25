@@ -53,6 +53,7 @@
                 letter-spacing: 0;
                 display: inline-block;
                 font-weight: 700;
+                margin-bottom: 16px;
                 @include darkcolor();
                 animation: myfirst .45s ease-in-out;
                 -webkit-animation: myfirst .45s ease-in-out; /* Safari 与 Chrome */
@@ -64,7 +65,6 @@
             max-width: 480px;
             font-weight: 500;
             @include tintcolor();
-            margin: 16px 0 32px 0;
             text-wrap: wrap;
             animation: myfirst .5s ease-in-out;
             -webkit-animation: myfirst .5s ease-in-out; /* Safari 与 Chrome */
@@ -83,9 +83,10 @@
             animation: myfirst .55s ease-in-out;
             -webkit-animation: myfirst .55s ease-in-out; /* Safari 与 Chrome */
             outline: none;
+            margin-top: 32px;
             margin-bottom: 32px;
             &:hover{
-                background: rgb(52,54,65);
+                background: #fff;
                 @include tintcolor()
             }
         }
@@ -109,14 +110,16 @@
         top: -220px;
         left: 0;
         width: 100%;
-        z-index: 1;
-        
         img{
            width: 100%;
-            // position: absolute;
-            // top: 0;
-            // left: 50;
-            // transform: translateX(-50%)
+        }
+        .site-bgbox{
+            position: absolute;
+            top: 390px;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(23,26,46,1);
         }
     }
     h1{
@@ -146,6 +149,7 @@
 // 六大优势
 .home-advantage{
     width: 100%;
+    position: relative;
     &>div{
         box-sizing: border-box;
         margin-bottom: 80px;
@@ -215,6 +219,7 @@
         }
         .adv-img{
             margin: 40px 0;
+            z-index: 2;
         }
         div:nth-child(1){
             margin-right: 20%;
@@ -368,20 +373,22 @@
         justify-content: center;
         input{
             box-sizing: border-box;
-            background: rgba(0,0,0,0.12);
+            background: rgba(255,255,255,0.12);
             border-radius: 100px;
+            font-size: 16px;
             width: 400px;
             height: 48px;
             outline: none;
             border: none;
             padding: 0 20px;
-            @include tintcolor()
+            @include tintcolor();
+            
         }
         button{
             width: 140px;
             height: 48px;
             background: #16365B;
-            border-radius: 100px; 
+            border-radius: 48px; 
             outline: none;
             border: none;
             font-size: 16px;
@@ -522,7 +529,7 @@
             flex: 1;
             justify-content: center; 
             height: auto;
-            margin-top: -40px;
+            margin-top: 0px;
             z-index: 4;
             .blockchain {
                 h4{
@@ -533,6 +540,7 @@
             p{
                 font-size: 16px;
                 line-height: 24px;
+                
             }
         }
         .home-content-cartoon{
@@ -552,6 +560,9 @@
         align-items: center;
         .txt:nth-child(2){
             margin: 0;
+        }
+        p{
+            
         }
     }
     .home-site{
@@ -601,6 +612,7 @@
                 justify-content: center;
                 img{
                     width: 70%;
+                    height: 70%;
                 }
             }
         }
@@ -628,8 +640,12 @@
                 margin:0;
             }
             .adv-img{
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 img{
-                    height: 50%;
+                    // height: 50%;
                 }
             }
         }
@@ -638,6 +654,9 @@
             &>div{
                 width: 100%;
                 .adv-img{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     margin: 0;
                 }
             }
@@ -693,35 +712,3 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
-    .home-content {
-        .home-content-txt{
-            height: 100%;
-            .blockchain{
-                line-height: 28px;
-                h4{
-                    display: block;
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width: 767px) {
-    .home-content {
-        .home-content-txt{
-            width: 100%;
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            button{
-                margin-top: 32px;
-            }
-            p{
-                width: auto;
-            }
-        }
-        .home-content-cartoon{
-            width: 100%;
-        }
-    }
-}

@@ -63,17 +63,13 @@
         }
     }
     .nav{
-        line-height: 72px;
         height: 100%;
     }
     .nav .lang{
         cursor: pointer;
         box-sizing: border-box;
         display: inline-block;
-        padding: 0 8px;
-        height: 24px;
-        line-height: 24px;
-        text-align: center;
+        padding: 3px 8px;
         @include bordercolor();
         border-radius: 16px;
         @include tintcolor();
@@ -114,6 +110,14 @@
        .navactive a{
             @include darkcolor();
             font-weight: bold;
+        }
+    }
+    .nav .zh-CN li a::after{
+        content: '';
+    }
+    .en{
+        li{
+            margin: 0;
         }
     }
     .en li:hover{
@@ -245,30 +249,11 @@
         padding:0 24px;
     }
 }
-@media screen and (max-width: 767px) {
-    .header {
-        padding:0 24px;
-        height: 64px;
-        .logo{
-            svg{
-                height: 24px;
-            }
-        }
-    }
-}
+
 @media screen and (max-width: 414px) {
     .header {
         display: flex;
         justify-content: space-between;
         padding:0 16px;
-    }
-}
-@media screen and (max-width: 1440px) {
-    .header {
-        .logo{
-            h2{
-                display: block;
-            }
-        }
     }
 }

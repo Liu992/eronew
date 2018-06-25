@@ -7,7 +7,7 @@ var camera;
 var light;
 var light1;
 var light2;
-var light3;
+// var light3;
 var raycaster;
 var mouse;
 var webgl;
@@ -35,16 +35,14 @@ class Globe extends Component {
             maxLights: 1,
             precision: "highp"
         });
-        renderer.setClearColor(0xFFFFFF, 0.0)
-        // renderer.setClearColor('#ffffff', 1.0);
-        //renderer.setClearColor('#171A2E', 1.0);
+        renderer.setClearColor(0xFFFFFF, 0.0);
         renderer.setSize(webgl.clientWidth * 2, webgl.clientWidth * 2);
         // //设置light
         light = new THREE.AmbientLight('#083A7F', .9, 0);
         light.position.set(0, 0, 0);//设置光源向量
         scene.add(light);
 
-        light1 = new THREE.PointLight('#6A9FBD', 0.55, 0, 1, 0);// 颜色  距离 强度 位置
+        light1 = new THREE.PointLight('#6A9FBD', 0.6, 0, 1, 0);// 颜色  距离 强度 位置
         light1.position.set(200, 100, 0);//设置光源向量
         scene.add(light1);
 
@@ -52,9 +50,9 @@ class Globe extends Component {
         light2.position.set(-200, -100, 80);//设置光源向量
         scene.add(light2);
 
-        light3 = new THREE.DirectionalLight('#6A9FBD',  0.55, 0, 1, 0);// .1
-        light3.position.set(100, -50, 40);//设置光源向量
-        scene.add(light3);
+        // light3 = new THREE.DirectionalLight('#6A9FBD',  0.3, 0, 1, 0);// .1
+        // light3.position.set(100, -50, 40);//设置光源向量
+        // scene.add(light3);
         
 
 
@@ -225,109 +223,91 @@ class Globe extends Component {
                 ajustCamera();
             };
         }
-        renderer.shadowMapType = THREE.PCFSoftShadowMap;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
         ajustCamera();
 
         var num = 10;
-        let flag = true;
         let han = 0.02
         // #F3F3FA
         function add () {
             num += han;
-            if (num >= 14&&flag) {
-                flag = !flag;
+            if (num >= 14) {
                 han = -0.02
             }else if(num <= 10){
                 han = 0.02
-                flag = !flag
             }
         }
 
         var num1 = 5;
-        let flag1 = true;
         let han1 = 0.02
         // #F3F3FA
         function add1 () {
             num1 += han1;
-            if (num1 >= 14&&flag1) {
-                flag1 = !flag1;
+            if (num1 >= 14) {
                 han1 = -0.02
             }else if(num1 <= 10){
                 han1 = 0.02
-                flag1 = !flag1
             }
         }
 
         var num2 = -5;
-        let flag2 = true;
         let han2 = 0.02
         // #F3F3FA
         function add2 () {
             num2 += han2;
-            if (num2 >= 0&&flag2) {
-                flag2 = !flag2;
+            if (num2 >= 0) {
                 han2 = -0.02
             }else if(num2 <= -5){
                 han2 = 0.02
-                flag2 = !flag2
             }
         }
 
         var num3 = -7;
-        let flag3 = true;
         let han3 = 0.02
         // #F3F3FA
         function add3 () {
             num3 += han3;
-            if (num3 >= -4.2&&flag3) {
-                flag3 = !flag3;
+            if (num3 >= -4.2) {
                 han3 = -0.02
             }else if(num3 <= -7){
                 han3 = 0.02
-                flag3 = !flag3
             }
         }
 
 
         var num4 = -10;
-        let flag4 = true;
         let han4 = 0.02
         // #F3F3FA
         function add4 () {
             num4 += han4;
-            if (num4 >= -5&&flag4) {
-                flag4 = !flag4;
+            if (num4 >= -5) {
                 han4 = -0.02
             }else if(num4 <= -13){
                 han4 = 0.02
-                flag4 = !flag4
             }
         }
 
 
 
         var num5 = -14;
-        let flag5 = true;
         let han5 = 0.02
         // #F3F3FA
         function add5 () {
             num5 += han5;
-            if (num5 >= -10&&flag5) {
-                flag5 = !flag5;
+            if (num5 >= -10) {
                 han5 = -0.02
             }else if(num5 <= -17){
                 han5 = 0.02
-                flag5 = !flag5
             }
         }
 
         function render() { 
-            add()
-            add1()
-            add2()
-            add3()
-            add4()
-            add5()
+            add();
+            add1();
+            add2();
+            add3();
+            add4();
+            add5();
             renderer.render(scene, camera);
             sphere9.position.y = num;
             sphere8.position.y = num1;
