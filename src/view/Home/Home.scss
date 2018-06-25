@@ -2,7 +2,7 @@
     color: rgba(255,255,255,0.87);
 }
 @mixin tintcolor{
-    color: rgba(145,182,200,1)
+    color: rgba(255,255,255,.6)
 }
 @mixin bordercolor{
     border: 1px solid rgba(145,182,200,0.6)
@@ -112,14 +112,6 @@
         width: 100%;
         img{
            width: 100%;
-        }
-        .site-bgbox{
-            position: absolute;
-            top: 390px;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: rgba(23,26,46,1);
         }
     }
     h1{
@@ -373,7 +365,7 @@
         justify-content: center;
         input{
             box-sizing: border-box;
-            background: rgba(255,255,255,0.12);
+            background: rgb(255,255,255);
             border-radius: 100px;
             font-size: 16px;
             width: 400px;
@@ -698,13 +690,15 @@
         p:nth-child(3){
             width: 100%;
             display: flex;
+            flex-direction: column;
             input{
                 display: block;
-                width: 70%;
+                width: 100%;
             }
             button{
+                margin-top: 20px;
                 display: block;
-                width: 30%;
+                width: 100%;
                 text-align: center;
                 font-size: 14px;
             }

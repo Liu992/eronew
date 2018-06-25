@@ -37,7 +37,7 @@ class Home extends Component {
           timeid: 'global.home.path6.time'
         }
       ],
-      pathactive: 3
+      pathactive: 1
     }
   }
   toWhitepaper() {
@@ -77,7 +77,6 @@ class Home extends Component {
         <div className="home-site">
           <div className="site-bg">
             <img src={require('../../assets//image//Group.svg')} alt=""/>
-            <div className="site-bgbox"></div>
           </div>
           <h1>What is eRoc?</h1>
           <p>
