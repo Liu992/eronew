@@ -87,7 +87,7 @@
             margin-bottom: 32px;
             &:hover{
                 background: #fff;
-                @include tintcolor()
+                color:#171a2e;
             }
         }
     }
@@ -267,13 +267,13 @@
             }
             &::after{
                 position: absolute;
-                top: 22px;
-                left: -30px;
+                top: 20px;
+                left: -31.5px;
                 display: block;
                 content: '';
-                width: 1px;
-                height: 142%;
-                background: rgba(182,149,149,0.12);
+                width: 3px;
+                height: 148%;
+                background: rgba(90,100,110,.7);
             }
             &:nth-child(6)::after{
                 height: 0;

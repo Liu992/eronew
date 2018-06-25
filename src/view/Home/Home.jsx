@@ -78,7 +78,8 @@ class Home extends Component {
           <div className="site-bg">
             <img src={require('../../assets//image//Group.svg')} alt=""/>
           </div>
-          <h1>What is eRoc?</h1>
+          
+          <h1>{Language('global.home.eroc')}</h1>
           <p>
             {Language('global.home.content')}
           </p>
@@ -202,14 +203,14 @@ class Home extends Component {
           </div>
         </div>
         {/* 订阅 */}
-        <div className="home-subscribe">
+        {/* <div className="home-subscribe">
             <h1>{Language('global.home.Subscribe.title')}</h1>
             <p>{Language('global.home.Subscribe.content')}</p>
             <p>
               <input type="text" placeholder="Email Address"/>
               <button>{Language('global.home.Subscribe.btn')}</button>
             </p>
-        </div>
+        </div> */}
       </div>
     )
   }

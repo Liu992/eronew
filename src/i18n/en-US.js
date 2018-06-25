@@ -12,7 +12,7 @@ const en_US = {
     'global.home.btn': 'WHITEPAPER',
 
     'global.home.explain': 'Take technological innovation to build the cornerstone of the billion chain',
-	'global.home.eroc': 'What is eRoc??',
+	'global.home.eroc': 'What is eRoc?',
 
 	// 六大优势
 	'global.home.advantage1.title': 'Ingenious and quick consensus algorithm secures every transaction from you',
