@@ -28,6 +28,7 @@ const zh_CN = {
 	'global.home.advantage6.content': '比特币算力越来越集中，以太坊算力也有集中的趋势，超级节点竞选更是公开走向中心化。而区块链中心化的趋势会带来易被攻击等诸多隐患。为了充分享有去中心化所带来的红利，e石公链坚持去中心化方向，同时采用DRC、PoWFOP等技术解决去中心化所带来的挑战。',
 	
 	// path
+<<<<<<< HEAD
 	'global.home.path.title': '路线图',
 
 	'global.home.path1.title': 'DRC测试链上线',
@@ -45,6 +46,33 @@ const zh_CN = {
 	'global.home.path4.title': 'PSS+APESC正式上线',
 	'global.home.path4.content': '',
 	'global.home.path4.time': '2020年三季度',
+=======
+	'global.home.path.title': '一个具有伟大功能的路线图。趁我们还在成长，加入我们吧!',
+
+	'global.home.path1.title': '白皮书',
+	'global.home.path1.content': '基于自身技术的高级智能契约的异步分片执行机制，对整个网络节点实现智能分片，形成多中心。',
+	'global.home.path1.time': '4 June 2018',
+
+	'global.home.path2.title': '私人配售',
+	'global.home.path2.content': '',
+	'global.home.path2.time': '4 June 2018',
+
+	'global.home.path3.title': '路演',
+	'global.home.path3.content': '基于自身技术的高级智能契约的异步分片执行机制，对整个网络节点实现智能分片，形成多中心。',
+	'global.home.path3.time': '4 June 2018',
+
+	'global.home.path4.title': '交换网络',
+	'global.home.path4.content': '',
+	'global.home.path4.time': '4 June 2018',
+
+	'global.home.path5.title': '公共区块链测试',
+	'global.home.path5.content': '异步分片执行',
+	'global.home.path5.time': '4 June 2018',
+
+	'global.home.path6.title': '公共区块链释放',
+	'global.home.path6.content': '',
+	'global.home.path6.time': '4 June 2018',
+>>>>>>> 66e3759dd1a1bb607315e8e9e43f923cd904c1ff
 
 	// 订阅
 	'global.home.Subscribe.title': '订阅我们的通讯',
