@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1440 646" style="enable-background:new 0 0 1440 646;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#filter-2);}
+	.st1{fill:url(#SVGID_1_);}
+	.st2{fill:url(#Oval-9_1_);}
+</style>
+<filter  filterUnits="objectBoundingBox" height="176.5%" id="filter-2" width="120.8%" x="-10.4%" y="-38.3%">
+	<feGaussianBlur  in="SourceGraphic" stdDeviation="50"></feGaussianBlur>
+</filter>
+<title>Group 17</title>
+<desc>Created with Sketch.</desc>
+<g id="Oval-9-Copy" class="st0">
+	
+		<radialGradient id="SVGID_1_" cx="319.6837" cy="623.3504" r="1.615" gradientTransform="matrix(391.9997 0 0 -163.7552 -124595.8984 102199.8594)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#375072"/>
+		<stop  offset="1" style="stop-color:#171A2E"/>
+	</radialGradient>
+	<path class="st1" d="M720,123c397.6,0,720,117.1,720,261.5c-375.9,3.6-855.9,3.6-1440,0C0,240.1,322.4,123,720,123z"/>
+</g>
+<radialGradient id="Oval-9_1_" cx="319.7862" cy="622.8076" r="0.993" gradientTransform="matrix(448.3137 0 0 -140.3503 -142644.1562 87608.25)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#3F6083"/>
+	<stop  offset="1" style="stop-color:#171A2E"/>
+</radialGradient>
+<path id="Oval-9" class="st2" d="M1439.9,644.7l0.1-347.4C1269.2,236.1,1009.8,197,719.5,197c-289.3,0-547.9,38.8-718.7,99.7
+	l0,348.6L1439.9,644.7z"/>
+</svg>

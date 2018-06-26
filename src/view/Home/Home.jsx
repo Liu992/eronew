@@ -144,7 +144,18 @@ class Home extends Component {
               <p>{Language('global.home.advantage3.content')}</p>
             </div>
             <div className="adv-img">
-            <img src={require('../../assets/image/a3.png')} alt=""/>
+                <div className="led">
+                <img className="leda a1" src={require('../../assets/image/a3(1).svg')} alt=""/>
+                <img className="leda a2" src={require('../../assets/image/a3(2).svg')} alt=""/>
+                <img className="leda a3" src={require('../../assets/image/a3(1).svg')} alt=""/>
+                <img className="leda a4" src={require('../../assets/image/a3(2).svg')} alt=""/>
+                <img className="leda a5" src={require('../../assets/image/a3(1).svg')} alt=""/>
+                <img className="leda a6" src={require('../../assets/image/a3(2).svg')} alt=""/>
+                <img className="leda a7" src={require('../../assets/image/a3(1).svg')} alt=""/>
+                <img className="leda a8" src={require('../../assets/image/a3(2).svg')} alt=""/>
+                <img className="leda a9" src={require('../../assets/image/a3(1).svg')} alt=""/>
+                <img className="bg" src={require('../../assets/image/a3.png')} alt=""/>
+                </div>
             </div>
           </div>
           <div className="home-advantage4">
@@ -159,7 +170,7 @@ class Home extends Component {
           <div className="home-advantage56">
             <div className="home-advantage5">
               <div className="adv-img">
-              <img src={require('../../assets/image/a5.svg')} alt=""/>
+                <img src={require('../../assets/image/a5.svg')} alt=""/>
               </div>
               <div className="adv-txt">
                 <h3>{Language('global.home.advantage5.title')}</h3>
@@ -178,7 +189,7 @@ class Home extends Component {
           </div>
         </div>
         {/* 进程 */}
-        <div className="home-path">
+        {/* <div className="home-path">
           <h2>{Language('global.home.path.title')}</h2>
           <div className="home-path-detail">
             <ul>
@@ -201,7 +212,7 @@ class Home extends Component {
               }
             </ul>
           </div>
-        </div>
+        </div> */}
         {/* 订阅 */}
         {/* <div className="home-subscribe">
             <h1>{Language('global.home.Subscribe.title')}</h1>

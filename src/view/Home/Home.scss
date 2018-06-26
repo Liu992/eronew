@@ -181,7 +181,7 @@
         width: 410px;
         width: 30%;
         img{
-            //width: 100%;
+            width:100%;
         }
     }
     .home-advantage1, .home-advantage3{
@@ -197,6 +197,65 @@
             margin-right: 20%;
         }
     }
+    .home-advantage3 .adv-img{
+        height: auto;
+        .led{
+            position: relative;
+            width: 100%;
+        }
+        .leda{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: auto;
+            height: auto;
+        }
+        .a1{
+            top: 64px;
+            left: 33px;
+            animation: plat 7s linear .1s infinite;
+        }
+        .a2{
+            top: 57px;
+            left: 142px;
+            animation: plat 8s linear infinite;
+        }
+        .a3{
+            top: 133px;
+            left: 73px;
+            animation: plat 3s linear infinite;
+        }
+        .a4{
+            top: 112px;
+            left: 130px;
+            animation: plat 5s linear 3s infinite;
+        }
+        .a5{
+            top: 111px;
+            left: 110px;
+            animation: plat 4s linear 5s infinite;
+        }
+        .a6{
+            top: 83px;
+            left: 156px;
+            animation: plat 3s linear 6s infinite;
+        }
+        .a7{
+            top: 106px;
+            left: 221px;
+            animation: plat 6s linear 6s infinite;
+        }
+        .a8{
+            top: 125px;
+            left: 190px;
+            animation: plat 3s linear 3s infinite;
+        }
+        .a9{
+            top: 157px;
+            left: 238px;
+            animation: plat 3s linear 1s infinite;
+        }
+    }
     .home-advantage56{
         display: flex;
         flex-direction: row;
@@ -210,10 +269,15 @@
             width: 100%;
         }
         .adv-img{
+            width: 100%;
             margin: 40px 0;
             z-index: 2;
+            text-align: center;
+            img{
+                width: 50%;
+            }
         }
-        div:nth-child(1){
+        &>div:nth-child(1){
             margin-right: 20%;
         }
     }
@@ -222,7 +286,30 @@
             margin-left: 20%;
         }
     }
-
+    
+}
+// 地图动画
+@keyframes plat {
+    0% {
+        transform: translateY(0px);
+        opacity: .5;
+    }
+    25% {
+        transform: translateY(-40px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-80px);
+        opacity: .5;
+    }
+    75% {
+        transform: translateY(-120px);
+        opacity: .3;
+    }
+    100%{
+        transform: translateY(-160px);
+        opacity: 0;
+    }
 }
 // 进程
 .home-path{
@@ -621,9 +708,19 @@
         .home-advantage3{
             .adv-img{
                 margin: 0;
-                img{
-                    height: 70%;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                .led{
+                    margin: 0;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    .bg{
+                        width: 100%;
+                    }
                 }
+                
             }
         }
         .home-advantage2,.home-advantage4{
