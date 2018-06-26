@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="43px" viewBox="0 0 8 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 18</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-150.1%" y="-5.4%" width="400.1%" height="110.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="0.486" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <path d="M1.65254482,3.73248682 C0.797631591,3.53396425 0.16191904,2.78528305 0.16191904,1.89202102 C0.16191904,0.847086665 1.03184253,0 2.10494753,0 C3.17805253,0 4.04797601,0.847086665 4.04797601,1.89202102 C4.04797601,2.78528305 3.41226346,3.53396425 2.55735024,3.73248682 L2.10494753,28.6956522 L1.65254482,3.73248682 Z" id="path-2"></path>
+        <filter x="-77.2%" y="-10.5%" width="254.4%" height="120.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.31372549   0 0 0 0 0.756862745   0 0 0 0 0.890196078  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="three" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Copy" transform="translate(-1053.000000, -3335.000000)">
+            <g id="Group-13" transform="translate(850.000000, 3245.000000)">
+                <g id="Group-9" transform="translate(5.000000, 87.000000)">
+                    <g id="Group-18" transform="translate(198.000000, 0.000000)">
+                        <g id="Group-8" transform="translate(1.970015, 16.565217)">
+                            <polygon id="Path-3" fill="#50C1E3" filter="url(#filter-1)" points="1.6191904 1.89202102 1.94302849 28.6956522 2.59070465 1.89202102"></polygon>
+                            <g id="Combined-Shape">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                            </g>
+                        </g>
+                        <text id="2" font-family="AvenirNext-Medium, Avenir Next" font-size="12.96" font-weight="400" fill="#F8E71C">
+                            <tspan x="0" y="13">2</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

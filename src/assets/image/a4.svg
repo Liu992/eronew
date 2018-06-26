@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Desktop Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="21.5443117%" cy="12.0444987%" fx="21.5443117%" fy="12.0444987%" r="517.573428%" gradientTransform="translate(0.215443,0.120445),scale(1.000000,0.866025),rotate(54.042759),translate(-0.215443,-0.120445)" id="radialGradient-1">
+            <stop stop-color="#00ADD1" offset="0%"></stop>
+            <stop stop-color="#00258D" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="21.5443117%" cy="12.0444987%" fx="21.5443117%" fy="12.0444987%" r="512.20297%" gradientTransform="translate(0.215443,0.120445),scale(1.000000,0.880000),rotate(53.605762),translate(-0.215443,-0.120445)" id="radialGradient-2">
+            <stop stop-color="#00ADD1" offset="0%"></stop>
+            <stop stop-color="#00258D" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="three" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Copy" transform="translate(-203.000000, -4091.000000)">
+            <g id="Group-14" transform="translate(203.000000, 4091.000000)">
+                <g id="Group-7" transform="translate(84.000000, 80.000000)">
+                    <polygon id="Polygon-2-Copy-4" fill="url(#radialGradient-1)" points="59.7785978 0 85.47175 14.8339483 85.47175 44.501845 59.7785978 59.3357934 34.0854456 44.501845 34.0854456 14.8339483"></polygon>
+                    <polygon id="Polygon-2-Copy-6" fill="url(#radialGradient-1)" points="26.1254613 180.664207 51.8186135 195.498155 51.8186135 225.166052 26.1254613 240 0.432309054 225.166052 0.432309054 195.498155"></polygon>
+                    <polygon id="Polygon-2-Copy-7" fill="url(#radialGradient-1)" points="186.420664 170.0369 212.113816 184.870849 212.113816 214.538745 186.420664 229.372694 160.727512 214.538745 160.727512 184.870849"></polygon>
+                    <polygon id="Polygon-2-Copy-5" fill="url(#radialGradient-1)" points="166.937269 33.6531365 192.630422 48.4870849 192.630422 78.1549815 166.937269 92.9889299 141.244117 78.1549815 141.244117 48.4870849"></polygon>
+                    <polygon id="Polygon-2-Copy" fill="url(#radialGradient-2)" points="108.929889 88.5608856 147.896679 110.701107 147.896679 154.98155 108.929889 177.121771 69.9630996 154.98155 69.9630996 110.701107"></polygon>
+                    <polyline id="Path-2" stroke="#50C1E3" points="85.0184502 44.2804428 107.335793 62.8782288 140.811808 62.8782288"></polyline>
+                    <path d="M108.04428,63.7954665 L108.04428,87.6818495" id="Line-2" stroke="#50C1E3" stroke-linecap="square"></path>
+                    <path d="M69.9188192,111.586716 L15.9852399,111.586716" id="Line-3" stroke="#50C1E3" stroke-linecap="square"></path>
+                    <path d="M192.177122,47.8228782 L229.372694,25.6826568" id="Path-5" stroke="#50C1E3"></path>
+                    <polyline id="Path-6" stroke="#50C1E3" points="109.815498 177.121771 109.815498 199.193869 89.3893584 224.944649 52.2509225 224.944649"></polyline>
+                    <path d="M109.847127,198.376384 L159.377965,198.376384" id="Line-4" stroke="#50C1E3" stroke-linecap="square"></path>
+                    <path d="M187.749077,169.104681 L187.749077,135.544766" id="Line-5" stroke="#50C1E3" stroke-linecap="square"></path>
+                    <path d="M213.471989,185.092251 L231.989265,185.092251" id="Line-6" stroke="#50C1E3" stroke-linecap="square"></path>
+                    <rect id="Rectangle-5" fill="yellow" height="8" width="8">
+                        <!-- <animateMotion
+                                dur="10s"
+                                repeatCount="indefinite"
+                                rotate="auto"
+                                path="M93,192h64l38-22v-26h32.8l-0.1,15.3l25.7,14.9l25.7-14.9L279,130l36-22"
+                            />
+                            <path d="M93,192h64l38-22v-26h32.8l-0.1,15.3l25.7,14.9l25.7-14.9L279,130l36-22" stroke="#999" stroke-width="2" fill="none"/> -->
+                            <animateMotion path="M-0.5,111.2l70.5,0l38.1-22.4v-26h32.8l-0.1,15.3L166.5,93l25.7-14.9l-0.1-29.3l36-22" begin="0s" dur="10s" rotate="auto" repeatCount="indefinite"/>
+  
+  
+                    </rect> 
+                    <!-- <path d="M-0.5,111.2l70.5,0l38.1-22.4v-26h32.8l-0.1,15.3L166.5,93l25.7-14.9l-0.1-29.3l36-22" stroke="#cd0000" stroke-width="2" fill="none" /> -->
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
