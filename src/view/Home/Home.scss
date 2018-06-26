@@ -326,6 +326,7 @@
         font-size: 32px;
         line-height: 40px;
         margin: 100px 0 100px 0;
+        z-index: 5;
         span{
             display: inline-block;
             width: 610px;
@@ -362,11 +363,7 @@
                 height: 148%;
                 background: rgba(90,100,110,.7);
             }
-<<<<<<< HEAD
             &:nth-child(4)::after{
-=======
-            &:nth-child(6)::after{
->>>>>>> 66e3759dd1a1bb607315e8e9e43f923cd904c1ff
                 height: 0;
             }
         }

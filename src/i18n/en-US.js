@@ -29,7 +29,6 @@ const en_US = {
 	'global.home.advantage6.content': "Bitcoin is becoming more and more centralized on block issuing, so as to the Ethereum. The super node concept is centralized by design. Centralization faces many potential dangers such as vulnerability to attacks. In order to fully make use of the advantages of decentralization, eRoc blockchain adhere to decentralization, and avoid the challenges caused by centralization by applying DRC, PoWFOP and other supportive technologies.",
 	
 	// path
-<<<<<<< HEAD
 	'global.home.path.title': "Roadmap",
 
 	'global.home.path1.title': 'DRC test chain launches online',
@@ -47,33 +46,6 @@ const en_US = {
 	'global.home.path4.title': 'PSS+APESC main chain launches online',
 	'global.home.path4.content': 'null',
 	'global.home.path4.time': 'Q3, 2020',
-=======
-	'global.home.path.title': "A roadmap with great features to come.Join us while we're still growing!",
-
-	'global.home.path1.title': 'Whitepaper',
-	'global.home.path1.content': 'The asynchronous sharding execution mechanism of advanced intelligent contract based entirely on own technology, which implements intelligent sharding for the nodes of the whole network and forms multi-center. ',
-	'global.home.path1.time': '4 June 2018',
-
-	'global.home.path2.title': 'Private Placement',
-	'global.home.path2.content': 'null',
-	'global.home.path2.time': '4 June 2018',
-
-	'global.home.path3.title': 'Roadshow',
-	'global.home.path3.content': 'The asynchronous sharding execution mechanism of advanced intelligent contract based entirely on own technology, which implements intelligent sharding for the nodes of the whole network and forms multi-center. ',
-	'global.home.path3.time': '4 June 2018',
-
-	'global.home.path4.title': 'Exchange online',
-	'global.home.path4.content': 'null',
-	'global.home.path4.time': '4 June 2018',
-
-	'global.home.path5.title': 'Public Blockchain test',
-	'global.home.path5.content': 'The asynchronous sharding execution',
-	'global.home.path5.time': '4 June 2018',
-
-	'global.home.path6.title': 'Public Blockchain release',
-	'global.home.path6.content': 'null',
-	'global.home.path6.time': '4 June 2018',
->>>>>>> 66e3759dd1a1bb607315e8e9e43f923cd904c1ff
 
 	// 订阅
 	'global.home.Subscribe.title': 'Subscribe to our newsletter',
