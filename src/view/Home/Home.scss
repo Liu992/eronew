@@ -211,48 +211,48 @@
             height: auto;
         }
         .a1{
-            top: 64px;
-            left: 33px;
+            top: 22.25%;
+            left: 9.9%;
             animation: plat 7s linear .1s infinite;
         }
         .a2{
-            top: 57px;
-            left: 142px;
+            top: 20.14%;
+            left: 42.72%;
             animation: plat 8s linear infinite;
         }
         .a3{
-            top: 133px;
-            left: 73px;
+            top: 43%;
+            left: 21.96%;
             animation: plat 3s linear infinite;
         }
         .a4{
-            top: 112px;
-            left: 130px;
+            top: 36.69%;
+            left: 39.11%;
             animation: plat 5s linear 3s infinite;
         }
         .a5{
-            top: 111px;
-            left: 110px;
+            top: 36.39%;
+            left: 33.09%;
             animation: plat 4s linear 5s infinite;
         }
         .a6{
-            top: 83px;
-            left: 156px;
+            top: 27.97%;
+            left: 46.93%;
             animation: plat 3s linear 6s infinite;
         }
         .a7{
-            top: 106px;
-            left: 221px;
+            top: 34.89%;
+            left: 66.48%;
             animation: plat 6s linear 6s infinite;
         }
         .a8{
-            top: 125px;
-            left: 190px;
+            top: 40.60;
+            left: 57.16%;
             animation: plat 3s linear 3s infinite;
         }
         .a9{
-            top: 157px;
-            left: 238px;
+            top: 50.23%;
+            left: 71.60%;
             animation: plat 3s linear 1s infinite;
         }
     }
@@ -287,6 +287,66 @@
         }
     }
     
+}
+// #Rectangle-Copy-2{
+    // animation: name-a2-3 2s linear infinite;
+// }
+#Rectangle-Copy{
+    animation: name-a2-2 3s linear infinite;
+}
+#Rectangle{
+    animation: name-a2-1 3s linear infinite 1s;
+}
+@keyframes name-a2-1{
+    0%{
+        opacity: 0;
+        transform-origin: 0px 0px 0px;
+        transform: translate(164.71px,-110px) rotate(45deg) ;
+    }
+    50%{
+        opacity: .7;
+        transform-origin: 0px 0px 0px;
+        transform: translate(164.71px,-30px) rotate(45deg);
+    }
+    100%{
+        opacity: 0;
+        transform-origin: 0px 0px 0px;
+        transform: translate(164.71px,-110px) rotate(45deg);
+    }
+}
+@keyframes name-a2-2{
+    0%{
+        opacity: .7;
+        transform-origin: 0px 0px 0px;
+        transform: translate(190.71px,-110.6px) rotate(45deg) ;
+    }
+    50%{
+        opacity: 0;
+        transform-origin: 0px 0px 0px;
+        transform: translate(190.71px,-55px) rotate(45deg);
+    }
+    100%{
+        opacity: .7;
+        transform-origin: 0px 0px 0px;
+        transform: translate(190.71px,-110.6px) rotate(45deg);
+    }
+}
+@keyframes name-a2-3{
+    0%{
+        opacity: 0;
+        transform-origin: 0px 0px 0px;
+        transform: translate(211.71px,10.6px) rotate(45deg) ;
+    }
+    50%{
+        opacity: 1;
+        transform-origin: 0px 0px 0px;
+        transform: translate(211.71px,-116.6px) rotate(45deg);
+    }
+    100%{
+        opacity: 0;
+        transform-origin: 0px 0px 0px;
+        transform: translate(211.71px,-216.6px) rotate(45deg);
+    }
 }
 // 地图动画
 @keyframes plat {
