@@ -112,7 +112,7 @@ class Home extends Component {
                 <g id="three" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                   <g id="Desktop-Copy" transform="translate(-138.000000, -2249.000000)">
                     <g id="Group-11" transform="translate(138.000000, 2226.000000)">
-                      <path d="M201.528759,346.325932 L157.81826,367.890885 L61.9800062,312.657408 L62.0290344,161.372717 L133.266176,161.931735 L133.266357,161.372717 L341.205315,163.004475 L341.156839,312.58476 L245.282763,367.890885 L201.528759,346.325932 Z" id="Combined-Shape" fill="url(#linearGradient-1)" y="10" opacity="0.7">
+                      <path id="bg" d="M201.528759,346.325932 L157.81826,367.890885 L61.9800062,312.657408 L62.0290344,161.372717 L133.266176,161.931735 L133.266357,161.372717 L341.205315,163.004475 L341.156839,312.58476 L245.282763,367.890885 L201.528759,346.325932 Z" id="Combined-Shape" fill="url(#linearGradient-1)" y="10" opacity="0.7">
                         
                       </path>
                       <polygon id="Rectangle-Copy-2" fillOpacity="0.5" fill="url(#linearGradient-2)" transform="translate(201.710121, 216.600092) rotate(45.000000) translate(-201.710121, -216.600092) " points="162.641134 177.505775 269.46498 148.793863 240.779107 255.69441 133.955261 284.406322">
