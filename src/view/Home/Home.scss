@@ -10,7 +10,20 @@
 .home{
     width: 100%;
     min-height: 100%;
-    overflow-x: hidden;
+    position: relative;
+    &::before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        background-image: url('../../assets/image//bg.jpg');
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+    }
 }
 .home-content{
     display: flex;
@@ -22,7 +35,7 @@
     box-sizing: border-box;
     padding:  0 5%;
     position: relative;
-    z-index: 0;
+    z-index: 3;
     &::before{
         content: '';
         display: block;
@@ -63,6 +76,7 @@
             font-size: 24px;
             line-height: 32px;
             max-width: 480px;
+            z-index: 333;
             font-weight: 500;
             @include tintcolor();
             text-wrap: wrap;
@@ -92,7 +106,6 @@
         }
     }
     .home-content-cartoon{
-        //max-height: 100%;
         width: 60%;
         box-sizing: border-box;
     }
@@ -107,15 +120,16 @@
     position: relative;
     .site-bg{
         position: absolute;
-        top: -220px;
+        top: -200px;
         left: 0;
         width: 100%;
+        z-index: 3;
         img{
            width: 100%;
         }
     }
     h1{
-        z-index: 2;
+        z-index: 3;
         font-size: 600;
         margin-bottom: 24px;
         text-align: center;
@@ -124,7 +138,7 @@
         @include darkcolor()
     }
     p{
-        z-index: 2;
+        z-index: 3;
         font-size: 16px;
         letter-spacing: 0;
         line-height: 24px;
@@ -213,47 +227,47 @@
         .a1{
             top: 22.25%;
             left: 9.9%;
-            animation: plat 7s linear .1s infinite;
+            -webkit-animation: plat 7s linear .1s infinite;
         }
         .a2{
             top: 20.14%;
             left: 42.72%;
-            animation: plat 8s linear infinite;
+            -webkit-animation: plat 8s linear infinite;
         }
         .a3{
             top: 43%;
             left: 21.96%;
-            animation: plat 3s linear infinite;
+            -webkit-animation: plat 3s linear infinite;
         }
         .a4{
             top: 36.69%;
             left: 39.11%;
-            animation: plat 5s linear 3s infinite;
+            -webkit-animation: plat 5s linear 3s infinite;
         }
         .a5{
             top: 36.39%;
             left: 33.09%;
-            animation: plat 4s linear 5s infinite;
+            -webkit-animation: plat 4s linear 5s infinite;
         }
         .a6{
             top: 27.97%;
             left: 46.93%;
-            animation: plat 3s linear 6s infinite;
+            -webkit-animation: plat 3s linear 6s infinite;
         }
         .a7{
             top: 34.89%;
             left: 66.48%;
-            animation: plat 6s linear 6s infinite;
+            -webkit-animation: plat 6s linear 6s infinite;
         }
         .a8{
             top: 40.60;
             left: 57.16%;
-            animation: plat 3s linear 3s infinite;
+            -webkit-animation: plat 3s linear 3s infinite;
         }
         .a9{
             top: 50.23%;
             left: 71.60%;
-            animation: plat 3s linear 1s infinite;
+            -webkit-animation: plat 3s linear 1s infinite;
         }
     }
     .home-advantage56{
@@ -289,84 +303,19 @@
     
 }
 #Rectangle-Copy-2{
-    animation: name-a2-3 2s linear infinite;
+    -webkit-animation: name-a2-3 2s linear infinite;
 }
 #Rectangle-Copy{
-    animation: name-a2-2 1.8s ease-in-out infinite;
+    -webkit-animation: name-a2-2 1.8s ease-in-out infinite;
 }
 #Rectangle{
-    animation: name-a2-1 1.6s ease-in-out infinite;
+    -webkit-animation: name-a2-1 1.6s ease-in-out infinite;
 }
-#Combined-Shape{
+#Combined-Shape1{
     opacity: .4;
 }
 #Rectangle-Copy-3{
     opacity: .5;
-}
-@keyframes name-a2-1{
-    0%{
-        transform-origin: 0px 0px 0px;
-        transform: translate(164.71px,-96px) rotate(45deg) ;
-    }
-    50%{
-        transform-origin: 0px 0px 0px;
-        transform: translate(164.71px,-110px) rotate(45deg);
-    }
-    100%{
-        transform-origin: 0px 0px 0px;
-        transform: translate(164.71px,-96px) rotate(45deg);
-    }
-}
-@keyframes name-a2-2{
-    0%{
-        transform-origin: 0px 0px 0px;
-        transform: translate(190.71px,-78px) rotate(45deg) ;
-    }
-    50%{
-        transform-origin: 0px 0px 0px;
-        transform: translate(190.71px,-88px) rotate(45deg);
-    }
-    100%{
-        transform-origin: 0px 0px 0px;
-        transform: translate(190.71px,-78px) rotate(45deg);
-    }
-}
-@keyframes name-a2-3{
-    0%{
-        transform-origin: 0px 0px 0px;
-        transform: translate(211.71px,-72px) rotate(45deg) ;
-    }
-    50%{
-        transform-origin: 0px 0px 0px;
-        transform: translate(211.71px,-80px) rotate(45deg);
-    }
-    100%{
-        transform-origin: 0px 0px 0px;
-        transform: translate(211.71px,-72px) rotate(45deg);
-    }
-}
-// 地图动画
-@keyframes plat {
-    0% {
-        transform: translateY(0px);
-        opacity: .5;
-    }
-    25% {
-        transform: translateY(-40px);
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(-80px);
-        opacity: .5;
-    }
-    75% {
-        transform: translateY(-120px);
-        opacity: .3;
-    }
-    100%{
-        transform: translateY(-160px);
-        opacity: 0;
-    }
 }
 // 进程
 .home-path{
@@ -392,7 +341,7 @@
 }
 .home-path-detail{
     ul{
-        padding-left: 34px;
+        padding-left: 60px;
         li{
             position: relative;
             h3{
@@ -430,6 +379,7 @@
         }
     }
 }
+// 进程按钮闪烁
 .state {
     margin:10px auto;
     width: 40px;
@@ -438,7 +388,6 @@
     top: -16px;
     left: -50px;
 }
-
 .a {
     display: inline-block;
     background: rgba(80,193,227,1);
@@ -465,7 +414,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    animation: cartoon2 1.5s infinite;
+    -webkit-animation: cartoon2 1.5s infinite;
 }
 
 .c {
@@ -481,7 +430,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    animation: cartoon1 1.5s infinite;
+    -webkit-animation: cartoon1 1.5s infinite;
 }
 // 订阅
 .home-subscribe{
@@ -537,6 +486,200 @@
         }
     }
 }
+@keyframes name-a2-1{
+    0%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(164.71px,-96px) rotate(45deg) ;
+    }
+    50%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(164.71px,-110px) rotate(45deg);
+    }
+    100%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(164.71px,-96px) rotate(45deg);
+    }
+}
+@-moz-keyframes name-a2-1{
+    0%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(164.71px,-96px) rotate(45deg) ;
+    }
+    50%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(164.71px,-110px) rotate(45deg);
+    }
+    100%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(164.71px,-96px) rotate(45deg);
+    }
+}
+@-webkit-keyframes name-a2-1{
+    0%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(164.71px,-96px) rotate(45deg) ;
+    }
+    50%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(164.71px,-110px) rotate(45deg);
+    }
+    100%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(164.71px,-96px) rotate(45deg);
+    }
+}
+@keyframes name-a2-2{
+    0%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(190.71px,-78px) rotate(45deg) ;
+    }
+    50%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(190.71px,-88px) rotate(45deg);
+    }
+    100%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(190.71px,-78px) rotate(45deg);
+    }
+}
+@-moz-keyframes name-a2-2{
+    0%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(190.71px,-78px) rotate(45deg) ;
+    }
+    50%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(190.71px,-88px) rotate(45deg);
+    }
+    100%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(190.71px,-78px) rotate(45deg);
+    }
+}
+@-webkit-keyframes name-a2-2{
+    0%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(190.71px,-78px) rotate(45deg) ;
+    }
+    50%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(190.71px,-88px) rotate(45deg);
+    }
+    100%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(190.71px,-78px) rotate(45deg);
+    }
+}
+@keyframes name-a2-3{
+    0%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(211.71px,-72px) rotate(45deg) ;
+    }
+    50%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(211.71px,-80px) rotate(45deg);
+    }
+    100%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(211.71px,-72px) rotate(45deg);
+    }
+}
+@-moz-keyframes name-a2-3{
+    0%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(211.71px,-72px) rotate(45deg) ;
+    }
+    50%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(211.71px,-80px) rotate(45deg);
+    }
+    100%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(211.71px,-72px) rotate(45deg);
+    }
+}
+@-webkit-keyframes name-a2-3{
+    0%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(211.71px,-72px) rotate(45deg) ;
+    }
+    50%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(211.71px,-80px) rotate(45deg);
+    }
+    100%{
+        transform-origin: 0px 0px 0px;
+        transform: translate(211.71px,-72px) rotate(45deg);
+    }
+}
+// 地图动画
+@keyframes plat {
+    0% {
+        transform: translateY(0px);
+        opacity: .5;
+    }
+    25% {
+        transform: translateY(-40px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-80px);
+        opacity: .5;
+    }
+    75% {
+        transform: translateY(-120px);
+        opacity: .3;
+    }
+    100%{
+        transform: translateY(-160px);
+        opacity: 0;
+    }
+}
+@-moz-keyframes plat {
+    0% {
+        transform: translateY(0px);
+        opacity: .5;
+    }
+    25% {
+        transform: translateY(-40px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-80px);
+        opacity: .5;
+    }
+    75% {
+        transform: translateY(-120px);
+        opacity: .3;
+    }
+    100%{
+        transform: translateY(-160px);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes plat {
+    0% {
+        transform: translateY(0px);
+        opacity: .5;
+    }
+    25% {
+        transform: translateY(-40px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-80px);
+        opacity: .5;
+    }
+    75% {
+        transform: translateY(-120px);
+        opacity: .3;
+    }
+    100%{
+        transform: translateY(-160px);
+        opacity: 0;
+    }
+}
+
 @-webkit-keyframes cartoon1 {
     0%{
         transform: scale(1);
@@ -605,8 +748,7 @@
         background: rgba(80,193,227, 0);
     }
 }
-@-webkit-keyframes myfirst
-{
+@-webkit-keyframes myfirst {
     0%   {
         opacity: 0;
         transform: translateY(30px);
@@ -668,7 +810,7 @@
             justify-content: center; 
             height: auto;
             margin-top: 0px;
-            z-index: 4;
+            margin-bottom: 40px;
             .blockchain {
                 h4{
                     font-size: 32px;
@@ -678,7 +820,6 @@
             p{
                 font-size: 16px;
                 line-height: 24px;
-                
             }
         }
         .home-content-cartoon{
@@ -699,9 +840,6 @@
         .txt:nth-child(2){
             margin: 0;
         }
-        p{
-            
-        }
     }
     .home-site{
         height: auto;
@@ -709,11 +847,8 @@
             margin-top: 40px;
             font-size: 20px;
         }
-        p{
-            // margin-bottom: 40px;
-        }
         .site-bg{
-            top: -40px;
+            top: -70px;
         }
     }
       // 六大优势
@@ -722,9 +857,6 @@
             h2{
                 width: 100%;
                 margin-top: 0;
-                span{
-
-                }
             }
             p{
                 width: 100%;
@@ -792,9 +924,6 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                img{
-                    // height: 50%;
-                }
             }
         }
         .home-advantage56{

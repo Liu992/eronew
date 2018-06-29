@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import './Index.scss';
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import RouteInfo from '../../components/RouteInfo';
 import { IntlProvider } from 'react-intl';
 
@@ -102,7 +101,7 @@ class Index extends Component {
   }
   render() {
     let { route } = this.props;
-    let { up } = this.state;
+    let { up, langFlag } = this.state;
     return (
       <div className="wrapper">
         <IntlProvider
@@ -115,13 +114,13 @@ class Index extends Component {
             <IntlProvider
               locale={this.state.langFlag}
               messages={messages[this.state.langFlag]}>
-              <RouteInfo routes={route}/>
+              <RouteInfo routes={route} lang={langFlag}/>
             </IntlProvider>
-            <IntlProvider
+            {/* <IntlProvider
               locale={this.state.langFlag}
               messages={messages[this.state.langFlag]}>
               <Footer />
-            </IntlProvider>
+            </IntlProvider> */}
           </div>
           
       </div>

@@ -9,7 +9,8 @@ const en_US = {
     // introduce
     'global.home.title': 'A Smart Contract Carrier',
     'global.home.content': 'eRoc, is a public blockchain based on "Edge Consented Asynchronous Smart Contract Partitioning Protocol" and is the fundermental platform for the building and execution of dApps in the future. "eRoc" is the reversion of “Core”, which means that we adhere to create a more open, equal and autonomous platform.',
-    'global.home.btn': 'WHITEPAPER',
+	'global.home.btn': 'WHITEPAPER',
+	'global.home.limit': 'The Business White Paper will be available on Jul.18, 2018. Stay tuned.',
 
     'global.home.explain': 'Empower trust everywhere',
 	'global.home.eroc': 'What is eRoc?',

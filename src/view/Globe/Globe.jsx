@@ -32,7 +32,7 @@ class Globe extends Component {
         renderer = new THREE.WebGLRenderer({
             alpha:true,
             antialias: true,
-            maxLights: 1,
+            preserveDrawingBuffer,
             precision: "highp"
         });
         renderer.setClearColor(0xFFFFFF, 0.0);

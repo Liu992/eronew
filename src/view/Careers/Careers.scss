@@ -1,0 +1,104 @@
+@mixin bright1 {
+    color: #fff;
+}
+@mixin bright2 {
+    color: rgba(255,255,255,.87);
+}
+@mixin bright3 {
+    color: rgba(255,255,255,.6);
+}
+.careers{
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 72px;
+    padding: 0 5%;
+    margin-top: 80px;
+    height: 100%;
+    &>div:nth-child(1){
+        min-height: 100%;
+    }
+    .careers-title{
+        @include bright1();
+        font-size: 34px;
+        line-height: 42px;
+    }
+    .careers-content{
+        width: 100%;
+        max-height: 100%;
+        ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            li{
+                width: 40%;
+                h2{
+                    @include bright2();
+                    font-size: 16px;
+                    line-height: 28px;
+                    margin: 48px 0 24px 0;
+                    font-weight: 500;
+                }
+                p{
+                    @include bright3();
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}
+.careers-foot{
+    width: 100%;
+}
+// 英文招聘
+.careers-en{
+    width: 100%;
+    .careers-content{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &>div{
+            width: 46%;
+            p{
+                @include bright3();
+                margin-top: 16px;
+                margin-bottom: 40px;
+            }
+            ol{
+                li{
+                    h2{
+                        @include bright2();
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .careers{
+        margin-top: 40px;
+        .careers-content{
+            ul{
+                flex-direction: column;
+                li{
+                    width: 100%;
+                }
+            }
+        }
+        .careers-en{
+            .careers-content{
+                flex-direction: column;
+                &>div{
+                    width: 100%;
+                    ol{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
