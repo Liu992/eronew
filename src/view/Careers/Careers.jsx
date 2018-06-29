@@ -159,7 +159,6 @@ Working hours：Both part time and full time are fine. Working for no less than 
           </div>
         }
         <div className="careers-foot"><Footer/></div>
-        
       </div>
     )
   }

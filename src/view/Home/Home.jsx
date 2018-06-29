@@ -58,7 +58,7 @@ class Home extends Component {
             <button onClick={this.toWhitepaper.bind(this)}>
               {Language('global.home.btn')}
             </button>
-            <p>{Language('global.home.limit')}</p>
+            <p className="tip">{Language('global.home.limit')}</p>
           </div>
           <div className="home-content-cartoon" ref="cartoon">
             <Globe />

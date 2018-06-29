@@ -15,6 +15,7 @@
     top: 72px;
     padding: 0 5%;
     margin-top: 80px;
+    margin-bottom: 16px;
     height: 100%;
     &>div:nth-child(1){
         min-height: 100%;
@@ -52,6 +53,9 @@
 }
 .careers-foot{
     width: 100%;
+    .footer{
+        padding: 0;
+    }
 }
 // 英文招聘
 .careers-en{

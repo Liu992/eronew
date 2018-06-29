@@ -83,6 +83,15 @@
             animation: myfirst .5s ease-in-out;
             -webkit-animation: myfirst .5s ease-in-out; /* Safari 与 Chrome */
         }
+        .tip{
+            width: 240px;
+            text-align: center;
+            font-size: 12px;
+            margin: 0;
+            line-height: 20px;
+            margin-top: 16px;
+            margin-bottom: 32px;
+        }
         button{
             width: 240px;
             height: 48px;
@@ -98,7 +107,7 @@
             -webkit-animation: myfirst .55s ease-in-out; /* Safari 与 Chrome */
             outline: none;
             margin-top: 32px;
-            margin-bottom: 32px;
+            
             &:hover{
                 background: #fff;
                 color:#171a2e;
