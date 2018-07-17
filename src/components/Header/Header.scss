@@ -66,51 +66,13 @@
     .nav{
         height: 100%;
         align-items: center;
-        ol{
-            height: 0;
-            overflow: hidden;
-            position: absolute;
-            top: 72px;
-            right: 0;
-            width: 178px;
-            background: #fff;
-            margin: 0;
-            padding: 0;
-            li{
-                height: 40px;
-                position: relative;
-                a{
-                    padding-left: 20px;
-                    box-sizing: border-box;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 100%;
-                    line-height: 40px;
-                    span{
-                        color: rgb(52,54,65);
-                    }
-                }
-            }
-            li:hover{
-                background: rgba(52, 54, 65, 0.12);
-                a{
-                    @include darkcolor();
-                }
-            }
-        }
-        .navolshow{
-            height: auto;
-        }
     }
     .nav ul{
         height: 100%;
+        display: flex;
+        align-items: center;
         &>li{
-            height: 100%;
-            line-height: 72px;
             margin-right: 40px;
-            display: inline-block;
             @include tintcolor();
             position: relative;
             &>a{
@@ -129,17 +91,21 @@
             &:last-child{
                 &>span{
                     text-align: center;
-                    line-height: 72px;
+                    // line-height: 72px;
                     text-transform: uppercase;
                 }
-                &::after{
-                    display: block;
-                    content: attr(title);
-                    font-weight: 600;
-                    height: 0;
-                    overflow: hidden;
-                    visibility: hidden;
-                }
+                // &::after{
+                //     display: block;
+                //     content: attr(title);
+                //     font-weight: 600;
+                //     height: 0;
+                //     overflow: hidden;
+                //     visibility: hidden;
+                // }
+            }
+            :hover>span{
+                @include darkcolor();
+                font-weight: 600;
             }
         }
     }
@@ -159,23 +125,6 @@
     }
     .nav .zh-CN>li>a::after{
         content: '';
-    }
-    .en{
-        &>li{
-            margin: 0;
-        }
-    }
-    .en>li:hover{
-        &>span{
-            @include darkcolor();
-            font-weight: 600;
-        }
-    }
-    .zh-CN>li:hover{
-        &>a{
-            @include darkcolor();
-            font-weight: 600;
-        }
     }
     .active>a>span{
         @include darkcolor();
@@ -199,6 +148,43 @@
     }
     .none{
         display: none;
+    }
+    ol{
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 36px;
+        right: 0;
+        width: 178px;
+        background: #fff;
+        margin: 0;
+        padding: 0;
+        li{
+            height: 40px;
+            position: relative;
+            a{
+                padding-left: 20px;
+                box-sizing: border-box;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                line-height: 40px;
+                span{
+                    color: rgb(52,54,65);
+                }
+            }
+        }
+        li:hover{
+            background: rgba(52, 54, 65, 0.12);
+            a span{
+                font-weight: 500;
+            }
+        }
+    }
+    .navolshow{
+        height: auto;
     }
 }
 .up{
@@ -278,17 +264,18 @@
             }
             li:hover{
                background: rgba(52, 54, 65, 0.12);
-                a{
+                &>a{
                     span{
                         color: rgb(52,54,65);
                     }
                 }
             }
         }
-        ol{
+        .olshow{
+            position: static;
             width: 100%;
             padding: 0;
-            margin-top: -6px;
+            margin-top: 0px;
             overflow: hidden;
             height: 0;
             transition: height .1s ease-in-out;
@@ -313,8 +300,8 @@
             }
             li:hover{
                 background: rgba(52, 54, 65, 0.12);
-                a{
-                    @include darkcolor();
+                a span{
+                    color: rgb(52,54,65);
                 }
             }
         }

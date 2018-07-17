@@ -27,7 +27,7 @@ class Home extends Component {
           timeid: 'global.home.path4.time'
         }
       ],
-      pathactive: 1
+      pathactive: -1
     }
   }
   toWhitepaper() {

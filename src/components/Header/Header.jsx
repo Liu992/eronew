@@ -112,7 +112,7 @@ class Header extends Component {
               {
                 navlist.map((item, ind) => {
                   return (
-                    item.id !== 'global.nav.download' ? <li key={ind} onClick={this.hide.bind(this, ind)}><Link to={item.path}><FormattedMessage id={item.id} /></Link></li> : <li key={ind} onClick={this.dialogshowol.bind(this)}><FormattedMessage id={item.id} /></li>
+                    item.id !== 'global.nav.download' ? <li key={ind} onClick={this.hide.bind(this, ind)}><Link to={item.path}><FormattedMessage id={item.id} /></Link></li> : <li key={ind} onClick={this.dialogshowol.bind(this)}><Link to="#"><FormattedMessage id={item.id} /></Link></li>
                   )
                 })
               }
