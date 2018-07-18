@@ -28,10 +28,10 @@ class Index extends Component {
   winScroll() {
     //给页面绑定滑轮滚动事件  
     if (document.addEventListener) {//firefox  
-      document.addEventListener('DOMMouseScroll', this.throttle(this.changeScroll, 500, 500));  
+      document.addEventListener('DOMMouseScroll', this.throttle(this.changeScroll, 200, 200));  
     }  
     //滚动滑轮触发scrollFunc方法  //ie 谷歌  
-    window.onmousewheel = document.onmousewheel = this.throttle(this.changeScroll, 500, 500)
+    window.onmousewheel = document.onmousewheel = this.throttle(this.changeScroll, 200, 200)
     // window.addEventListener('scroll', this.throttle(this.changeScroll, 500, 1000));
   }
   headH(h) {

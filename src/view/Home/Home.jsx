@@ -51,6 +51,7 @@ class Home extends Component {
           <div className="home-content-txt" ref="txt">
             <div className="blockchain">
               <h4>{Language('global.home.title')}</h4>
+              
             </div>
             <p>
               {Language('global.home.explain')}

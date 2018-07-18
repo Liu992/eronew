@@ -300,8 +300,18 @@ class Globe extends Component {
                 han5 = 0.02
             }
         }
+        
+        if (window.navigator.userAgent.indexOf('baidu')>0) {
+            render1()
+        } else {
+            render2()
+        }
+        function render1 () {
+            renderer.render(scene, camera);
+            requestAnimationFrame(render1);
+        }
 
-        function render() { 
+        function render2() { 
             add();
             add1();
             add2();
@@ -316,9 +326,9 @@ class Globe extends Component {
             sphere5.position.y = num4;
             sphere4.position.y = num5;
             scene.rotation.y -= -0.003;
-            requestAnimationFrame(render);
+            requestAnimationFrame(render2);
         }
-        render();
+        // render2();
     }
     render() {
         return (
