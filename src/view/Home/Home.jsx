@@ -3,6 +3,7 @@ import './Home.scss';
 import Language from '../../components/Language';
 import asyncComponent from '../../components/asyncComponent';
 import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 const Globe = asyncComponent(() => import(/* webpackChunkName: "foo" */ "../Globe"));
 
 class Home extends Component {
@@ -25,13 +26,18 @@ class Home extends Component {
         {
           titleid: 'global.home.path4.title',
           timeid: 'global.home.path4.time'
+        },
+        {
+          titleid: 'global.home.path5.title',
+          timeid: 'global.home.path5.time'
+        },
+        {
+          titleid: 'global.home.path6.title',
+          timeid: 'global.home.path6.time'
         }
       ],
-      pathactive: -1
+      pathactive: 0
     }
-  }
-  toWhitepaper() {
-    this.props.history.replace('/index/home')
   }
   componentDidMount() {
     if (window.innerWidth > 768) {
@@ -47,19 +53,19 @@ class Home extends Component {
     let { pathlist, pathactive } = this.state;
     return (
       <div className="home">
+      <Header/>
         <div className="home-content">
           <div className="home-content-txt" ref="txt">
             <div className="blockchain">
               <h4>{Language('global.home.title')}</h4>
-              
             </div>
             <p>
               {Language('global.home.explain')}
             </p>
-            <button onClick={this.toWhitepaper.bind(this)}>
-              {Language('global.home.btn')}
+            <button>
+            <a href={require('../../static/whitepaper.pdf')}>{Language('global.home.btn')}</a>
             </button>
-            <p className="tip">{Language('global.home.limit')}</p>
+            {/* <p className="tip">{Language('global.home.limit')}</p> */}
           </div>
           <div className="home-content-cartoon" ref="cartoon">
             <Globe />
@@ -117,7 +123,6 @@ class Home extends Component {
                     <g id="Group-11" transform="translate(138.000000, 2226.000000)">
                       <path d="M201.528759,346.325932 L157.81826,367.890885 L61.9800062,312.657408 L62.0290344,161.372717 L133.266176,161.931735 L133.266357,161.372717 L341.205315,163.004475 L341.156839,312.58476 L245.282763,367.890885 L201.528759,346.325932 Z" id="Combined-Shape1" fill="url(#linearGradient-1)" y="10" opacity="0.7"></path>
                       <polygon id="Rectangle-Copy-2" fillOpacity="0.5" fill="url(#linearGradient-2)" transform="translate(201.710121, 216.600092) rotate(45.000000) translate(-201.710121, -216.600092) " points="162.641134 177.505775 269.46498 148.793863 240.779107 255.69441 133.955261 284.406322">
-
                       </polygon>
                       <polygon id="Rectangle-Copy" fillOpacity="0.5" fill="url(#linearGradient-2)" transform="translate(201.710121, 184.145731) rotate(45.000000) translate(-201.710121, -184.145731) " points="162.641134 145.051414 269.46498 116.339502 240.779107 223.240048 133.955261 251.951961"></polygon>
                       <polygon id="Rectangle" fill="url(#linearGradient-3)" transform="translate(201.710121, 152.502729) rotate(45.000000) translate(-201.710121, -152.502729) " points="162.641134 113.408412 269.46498 84.6965001 240.779107 191.597046 133.955261 220.308959"></polygon>
@@ -192,7 +197,7 @@ class Home extends Component {
                   return (
                     <li key={ind} className={pathactive > ind ? 'pathactive' : ''}>
                       <div className="state">
-                        <div className="a"></div>
+                        <div className={`a ${pathactive === ind ? 'activeA': ''}`}></div>
                         <div className="b" style={{ display: pathactive === ind ? 'block' : 'none' }}></div>
                         <div className="c" style={{ display: pathactive === ind ? 'block' : 'none' }}></div>
                       </div>

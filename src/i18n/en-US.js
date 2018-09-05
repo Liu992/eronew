@@ -4,7 +4,8 @@ const en_US = {
     'global.nav.foundation': 'FOUNDATION',
     'global.nav.careers': 'CAREERS',
     'global.nav.download': 'DOWNLOAD',
-    'global.nav.lang': 'ENGLISH',
+	'global.nav.lang': 'ENGLISH',
+	'global.nav.route': 'ROUTEMAP',
 
     // introduce
     'global.home.title': 'A Smart Contract Carrier',

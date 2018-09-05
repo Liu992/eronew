@@ -1,0 +1,181 @@
+.foundation{
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    dl,dt,dd{
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
+.foundation-box{
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 130px;
+    hr{
+        width: 450px;
+        margin: 64px auto;
+        text-align: center;
+        border: .5px solid RGBA(216, 216, 216, .1);
+    }
+    .title{
+        font-size: 24px;
+        text-align: center;
+        color: rgba(255,255,255,.87);
+    }
+    .head{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: rgba(255,255,255,.50);
+        overflow: hidden;
+        img{
+            width:80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+    }
+    .username{
+        font-size: 16px;
+        color: rgba(255,255,255,.87);
+    }
+    .describe{
+        font-size: 12px;
+        color: rgba(255,255,255,.54)
+    }
+    .introduce{
+        h1{
+            text-align: center;
+        }
+        p{
+            font-size: 14px;
+            color: rgba(255,255,255,.60);
+            margin-top: 30px;
+        }
+    }
+    .counselor_team{
+        &+hr{
+            margin-top: 16px;
+        }
+        .title{
+            margin-bottom: 32px;
+        }
+        .team_list{
+            display: flex;
+            flex-wrap: wrap;
+            dl{
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 38px;
+                margin-bottom: 48px;
+                // justify-content: center;
+                dd{
+                    margin: 0 auto;
+                    width: 100%;
+                    text-align: center;
+                }
+                .head{
+                    margin-bottom: 24px;
+                }
+                .username{
+                    display: block;
+                    margin-bottom: 8px;
+                }
+                .describe{
+                    display: block;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+    .skill_team{
+        .team_list{
+            display: flex;
+            flex-wrap: wrap;
+            dl{
+                width: 50%;
+                margin-top: 64px;
+                display: flex;
+                padding: 0 24px;
+                // margin-left: 24px;
+                // margin-right: 24px;
+                .head{
+                    flex-shrink: 0;
+                    margin-right: 24px;
+                }
+                .username{
+                    display: block;
+                    margin-bottom: 16px;
+                }
+                .describe{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .foundation{
+        width: 100%;
+    }
+    .foundation-box{
+        width: 100%;
+        .introduce{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 5%;
+        }
+        .counselor_team{
+            width: 100%;
+            .team_list{
+                width: 100%;
+                dl{
+                    width: 33.33%;
+                }
+            }
+        }
+    } 
+}
+@media screen and (max-width:440px) {
+    .foundation{
+        width: 100%;
+    }
+    .foundation-box{
+        width: 100%;
+        hr{
+            width: 50%;
+        }
+        .introduce{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 5%;
+        }
+        .counselor_team{
+            width: 100%;
+            .team_list{
+                width: 100%;
+                dl{
+                    width: 50%;
+                }
+            }
+        }
+        .skill_team{
+            .team_list{
+                dl{
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    .head{
+                        margin-right:0;
+                    }
+                    .username{
+                        margin-top: 16px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    } 
+}

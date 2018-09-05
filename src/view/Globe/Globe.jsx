@@ -1,6 +1,7 @@
 import './Globe.css';
 import React, { Component } from 'react';
 import * as THREE from 'three';
+var box;
 var renderer, scene, camera, light, light1, light2, raycaster, mouse, webgl, regionR = 50;
 var sphere, sphere1, sphere2, sphere3, sphere4, sphere5, sphere6, sphere7, sphere8, sphere9;
 var num = 10, han = 0.02, num1 = 5, han1 = 0.02, num2 = -5, han2 = 0.02, num3 = -7, han3 = 0.02, num4 = -10, han4 = 0.02, num5 = -14, han5 = 0.02;
@@ -64,10 +65,17 @@ class Globe extends Component {
     this.createSphere();
     this.cretemove();
     this.ajustCamera();
+    this.screenChange();
     this.render2();
-    var box = document.getElementsByTagName('canvas')[0];
+    this.resize();
+  }
+  resize=()=>{
+    box = document.getElementsByTagName('canvas')[0];
     box.style.width = webgl.clientWidth + 'px';
     box.style.height = webgl.clientWidth + 'px';
+  }
+  screenChange=()=> {
+    window.addEventListener('resize', this.resize);
   }
   initThree() {
     var requestAnimationFrame = window.requestAnimationFrame
@@ -78,6 +86,7 @@ class Globe extends Component {
     webgl = document.getElementById('WebGL-output');
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(17, window.innerHeight / window.innerHeight);
+    // camera = new THREE.PerspectiveCamera(17, window.innerWidth / window.innerHeight);
     camera.position.r = 0;
 
     renderer = new THREE.WebGLRenderer({
@@ -88,6 +97,7 @@ class Globe extends Component {
     });
     renderer.setClearColor(0xFFFFFF, 0.0);
     renderer.setSize(webgl.clientWidth * 2, webgl.clientWidth * 2);
+    // renderer.setSize(window.innerWidth * 2, window.innerHeight * 2);
     // 将渲染器的输出添加到html元素。
     webgl.appendChild(renderer.domElement);
   }
@@ -243,6 +253,9 @@ class Globe extends Component {
     camera.position.x = x;
     camera.position.z = z;
     camera.lookAt(new THREE.Vector3(0, 0, 0));
+  }
+  componentWillUnmount () {
+    // this.render2() = 0
   }
   render() {
     return (

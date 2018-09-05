@@ -20,10 +20,11 @@
         position: absolute;
         bottom: 0px;
         left: 0;
-        background-image: url('../../assets/image//bg.jpg');
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        background-size: 100% auto;
+        // background-image: url('../../assets/image//bg.jpg');
+        // background-position: center bottom;
+        // background-repeat: no-repeat;
+        // background-size: 100% auto;
+        z-index: 0;
     }
 }
 .home-content{
@@ -98,20 +99,20 @@
             height: 48px;
             font-size: 16px;
             background: transparent;
-            // background: #fff;
-            @include darkcolor();
-            @include bordercolor();
-            font-weight: 600;
+            border: 2px solid #fff;
             border-radius: 100px;
             cursor: pointer;
             animation: myfirst .55s ease-in-out;
             -webkit-animation: myfirst .55s ease-in-out; /* Safari 与 Chrome */
             outline: none;
             margin-top: 32px;
-            
-            &:hover{
-                background: #fff;
-                color:#171a2e;
+            a{
+                font-weight: 600;
+                color: #fff;
+                display: block;
+                width: 100%;
+                height: 100%;
+                line-height: 44px;
             }
         }
     }
@@ -356,8 +357,14 @@
             position: relative;
             h3{
                 @include darkcolor();
-                font-size: 20px;
+                font-size: 16px;
                 line-height: 28px;
+            }
+            .a{
+                background: RGBA(80, 193, 227, 0.12);
+            }
+            .activeA{
+                background: rgba(80,193,227,1);
             }
             p:nth-child(3){
                 margin: 8px 0;
@@ -372,20 +379,25 @@
             }
             &::after{
                 position: absolute;
-                top: 20px;
-                left: -31.5px;
+                top: 24px;
+                left: -30.5px;
                 display: block;
                 content: '';
-                width: 3px;
-                height: 148%;
-                background: rgba(90,100,110,.7);
+                width: 2px;
+                height: 135%;
+                background: RGBA(80, 193, 227, 0.12);
             }
-            &:nth-child(4)::after{
+            &:nth-child(6)::after{
                 height: 0;
             }
         }
         .pathactive::after{
             background: rgba(80,193,227,1);
+        }
+        .pathactive {
+            .a{
+                background: rgba(80,193,227,1);
+            }
         }
     }
 }
@@ -820,7 +832,7 @@
             justify-content: center; 
             height: auto;
             margin-top: 0px;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
             .blockchain {
                 h4{
                     font-size: 32px;

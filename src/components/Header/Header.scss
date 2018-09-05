@@ -39,6 +39,7 @@
         @include flex();
         align-items: center;
         height: 100%;
+        cursor: pointer;
         img{
             height: 32px;
         }
@@ -73,12 +74,15 @@
         align-items: center;
         &>li{
             margin-right: 40px;
+            cursor: pointer;
             @include tintcolor();
             position: relative;
+            height: 25px;
             &>a{
                 display: inline-block;
                 text-transform: uppercase;
-                @include tintcolor();
+                color: #aaa;
+                font-weight: 500;
             }
             &>a::after{
                 display: block;
@@ -90,9 +94,10 @@
             }
             &:last-child{
                 &>span{
-                    text-align: center;
-                    // line-height: 72px;
-                    text-transform: uppercase;
+                    // text-align: center;
+                    // // line-height: 72px;
+                    // text-transform: uppercase;
+                    font-weight: 500;
                 }
                 // &::after{
                 //     display: block;
@@ -110,17 +115,19 @@
         }
     }
     .nav .lang{
+        background: transparent;
+        outline: none;
         cursor: pointer;
-        box-sizing: border-box;
-        display: inline-block;
-        padding: 3px 8px;
-        @include bordercolor();
+        border:1px solid #aaa;
         border-radius: 16px;
-        @include tintcolor();
-        font-size: 14px;
         height: 28px;
+        span{
+            padding: 3px 4px;
+            color: #aaa;
+            font-size: 14px;
+        }
         &:hover{
-            color: #DEFFFFFF;
+            @include darkcolor();
         }
     }
     .nav .zh-CN>li>a::after{

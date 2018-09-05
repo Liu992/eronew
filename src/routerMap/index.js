@@ -7,10 +7,6 @@ function MyLoadingComponent() {
   </div>;
 }
 
-let Index = Loadable({
-  loader: () => import('../view/Index'),
-  loading: MyLoadingComponent
-});
 
 let Home = Loadable({
   loader: () => import('../view/Home'),
@@ -26,44 +22,28 @@ let Careers = Loadable({
   loader: () => import('../view/Careers'),
   loading: MyLoadingComponent
 });
-
-let Download = Loadable({
-  loader: () => import('../view/Download'),
+let WhiteBook = Loadable({
+  loader: () => import('../view/WhiteBook/WhiteBook.jsx'),
   loading: MyLoadingComponent
 });
+
 
 
 let routerMap = [
   {
     path: '/',
-    exact: true
+    exact: true,
+    component: Home
   },
   {
-    path: '/index',
+    path: '/foundation',
     exact: false,
-    component: Index,
-    children: [
-      {
-        path: '/index/home',
-        exact: false,
-        component: Home
-      },
-      {
-        path: '/index/foundation',
-        exact: false,
-        component: Foundation
-      },
-      {
-        path: '/index/careers',
-        exact: false,
-        component: Careers
-      },
-      {
-        path: '/index/download',
-        exact: false,
-        component: Download
-      }
-    ]
+    component: Foundation
+  },
+  {
+    path: '/careers',
+    exact: false,
+    component: Careers
   }
 ]
 
