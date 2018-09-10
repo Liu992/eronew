@@ -62,9 +62,9 @@ class Home extends Component {
             <p>
               {Language('global.home.explain')}
             </p>
-            <button>
+            <div className="paperbtn">
             <a href={require('../../static/whitepaper.pdf')}>{Language('global.home.btn')}</a>
-            </button>
+            </div>
             {/* <p className="tip">{Language('global.home.limit')}</p> */}
           </div>
           <div className="home-content-cartoon" ref="cartoon">

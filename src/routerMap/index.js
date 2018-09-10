@@ -22,10 +22,10 @@ let Careers = Loadable({
   loader: () => import('../view/Careers'),
   loading: MyLoadingComponent
 });
-let WhiteBook = Loadable({
-  loader: () => import('../view/WhiteBook/WhiteBook.jsx'),
-  loading: MyLoadingComponent
-});
+// let WhiteBook = Loadable({
+//   loader: () => import('../view/WhiteBook/WhiteBook.jsx'),
+//   loading: MyLoadingComponent
+// });
 
 
 
@@ -44,7 +44,12 @@ let routerMap = [
     path: '/careers',
     exact: false,
     component: Careers
-  }
+  },
+  // {
+  //   path: '/whitebook',
+  //   exact: false,
+  //   component: WhiteBook
+  // }
 ]
 
 export default routerMap
